@@ -5,6 +5,6 @@ name: thiagorossener
 display_name: Jay Freeman
 position: Chief Editor
 bio: Just a developer.
-github_username: thiagorossener
+github_username: JayFreemandev
 ---
 
