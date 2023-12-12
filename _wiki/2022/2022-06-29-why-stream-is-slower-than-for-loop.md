@@ -6,7 +6,7 @@ updated : 2022-06-29 19:54:06 +0900
 resource: 1E/673069-2E22-4100-9944-E2AF5A4C4572
 toc     : true
 public  : true
-parent  : 2022
+parent  : [[2022]]
 latex   : true
 ---
 * TOC

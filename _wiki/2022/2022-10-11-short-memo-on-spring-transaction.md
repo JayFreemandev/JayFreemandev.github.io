@@ -6,7 +6,7 @@ updated : 2022-10-11 22:05:44 +0900
 resource: 86/CDE116-F3C6-4D90-9E08-DD127D27F6E4
 toc     : true
 public  : true
-parent  : 2022
+parent  : [[2022]]
 latex   : true
 ---
 * TOC

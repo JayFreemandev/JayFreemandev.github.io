@@ -6,7 +6,7 @@ updated : 2022-11-01 20:44:40 +0900
 resource: A7/953B01-621E-4081-B40C-2BCDA2ECBBC3
 toc     : true
 public  : true
-parent  : 2022
+parent  : [[2022]]
 latex   : true
 ---
 * TOC

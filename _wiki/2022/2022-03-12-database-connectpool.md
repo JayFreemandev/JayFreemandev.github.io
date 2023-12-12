@@ -6,7 +6,7 @@ updated : 2022-03-12 21:35:00 +0900
 resource: CE/7B98C2-F86D-46A9-949B-56BAA0135AF6
 toc     : true
 public  : true
-parent  : 2022
+parent  : [[2022]]
 latex   : true
 ---
 * TOC

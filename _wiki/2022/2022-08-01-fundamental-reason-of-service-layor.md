@@ -6,7 +6,7 @@ updated : 2022-08-01 18:00:40 +0900
 resource: 38/90F574-7578-4942-B299-A6D54199006F
 toc     : true
 public  : true
-parent  : 2022
+parent  : [[2022]]
 latex   : true
 ---
 * TOC
