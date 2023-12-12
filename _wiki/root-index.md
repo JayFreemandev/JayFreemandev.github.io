@@ -8,19 +8,59 @@ updated : 2022-12-07 23:01:03 +0900
 regenerate: true
 ---
 
-## [[diary]]
+## [[/quant]]
 
-## book
+* [[/quant/test1]]
+* [[/quant/test2]]
+* [[/quant/test3]]
 
-* [[book]]
+## [[/finance]]
 
-## 2023
+* [[/finance/test1]]
+* [[/finance/test2]]
+* [[/finance/test3]]
 
-* [[2023]]
-* 
-## 2022
+## [[/math]]
 
-* [[2022]]
+* [[/math/test1]]
+* [[/math/test2]]
+* [[/math/test3]]
+
+## [[/article]]
+
+* [[/article/test1]]
+* [[/article/test2]]
+* [[/article/test3]]
+
+## [[/system-deisgn]]
+
+* [[/system-deisgn/test1]]
+* [[/system-deisgn/test2]]
+* [[/system-deisgn/test3]]
+
+## [[/programming]]
+
+* [[/programming/python]]
+* [[/programming/design-pattern]]
+* [[/programming/oop]]
+* [[/programming/effective-test]]
+
+## [[/diary]]
+
+* [[/memo]]
+    * [[/memo/2022]]
+    * [[/memo/2023]]
+    * [[/memo/2024]]
+
+* [[/links]]
+    * [[/links/2022]]
+    * [[/links/2023]]
+    * [[/links/2024]]
+
+* [[/review]]
+    * [[/review/2022]]
+    * [[/review/2023]]
+    * [[/review/2024]]
 
 ---
 
