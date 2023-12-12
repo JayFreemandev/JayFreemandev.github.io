@@ -1,0 +1,61 @@
+# Site settings
+title: Jay Freeman
+url: "https://www.jayfreemandev.tech"
+baseurl: ""
+description: >
+    위키 블로그
+
+# My information
+email: jayfreemandev@gmail.com
+author: Jay Freeman
+profile: 생각의 속도
+twitter_username: nomoregosiwon
+github_username: JayFreemandev
+comment-support: utterances
+
+# Build settings
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+giscus:
+  repo: JayFreemandev/JayFreemandev.github.io
+  repo_id: SAMPLE-VALUE
+  category: Announcements
+  category_id: SAMPLE-VALUE
+
+google_analytics:
+  ua: SAMPLE-VALUE
+  encrypted_ua: THIS-IS-SAMPLE-VALUE
+
+google_adsense:
+  client: SAMPLE-VALUE
+
+blame: "https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki"
+edit: "https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki"
+issue: "https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new"
+
+timezone: "Asia/Seoul"
+
+# https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
