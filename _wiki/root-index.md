@@ -8,6 +8,12 @@ updated : 2022-12-07 23:01:03 +0900
 regenerate: true
 ---
 
+## [[/book]]
+
+* [[/book/test1]]
+* [[/book/test2]]
+* [[/book/test3]]
+
 ## [[/quant]]
 
 * [[/quant/test1]]
