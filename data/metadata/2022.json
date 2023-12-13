@@ -1,0 +1,16 @@
+{
+ "type": "wiki",
+ "title": "2022",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/2022",
+ "updated": "2022-12-06 21:35:00 +0900",
+ "children": [
+  "2022/2022-03-12-database-connectpool",
+  "2022/2022-04-21-redis-can-not-be-main",
+  "2022/2022-06-29-why-stream-is-slower-than-for-loop",
+  "2022/2022-08-01-fundamental-reason-of-service-layor",
+  "2022/2022-10-11-short-memo-on-spring-transaction",
+  "2022/2022-11-01-virtural-memory"
+ ]
+}

@@ -51,12 +51,12 @@ regenerate: true
 * [[/programming/oop]]
 * [[/programming/effective-test]]
 
-## [[/diary]]
+## Archive
 
-* [[/memo]]
-    * [[/memo/2022]]
-    * [[/memo/2023]]
-    * [[/memo/2024]]
+* Memo
+    * [[/2022]]
+    * [[/2023]]
+    * [[/2024]]
 
 * [[/links]]
     * [[/links/2022]]

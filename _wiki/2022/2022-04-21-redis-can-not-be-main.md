@@ -6,7 +6,7 @@ updated : 2022-04-21 19:52:40 +0900
 resource: 64/2F57A9-C9EC-49D8-B99E-9183DECBBE4D
 toc     : true
 public  : true
-parent  : [[2022]]
+parent  : [[/2022]]
 latex   : true
 ---
 * TOC
