@@ -28,100 +28,25 @@ latex: true
 > 기억의 오류에 의존하지 마시오. - 마스터이
 
 
-## About Me
+## 🔭 About Me
 
 * Designing and implementing scalable and maintainable architectures.
 * Developing clean and readable code for efficient software solutions.
 * Applying mathematical analysis to solve complex problems. .
 
-## Open Source Contributions
+## 🌐 Open Source Contribution
 
-* Empyrial - A Quantitative Investment Library,
-  I'm contributing to Empyrial is designed for financial institutions and retail investors, gaining rapid popularity in the finance industry
-  * Engine (backtesting + performance analysis):
-  * Rebalancing:
-  * Risk manager:
+- **[QuantStats - Portfolio analytics](https://github.com/ranaroussi/quantstats)**  
+QuantStats is one of best with in-depth **performance analytics** and **risk metrics**
 
-## Deepening Domain Knowledges
+- **[Pysystemtrade - Backtest](https://github.com/robcarver17/pysystemtrade)**   
+Pysystemtrade is **backtesting** and trading engine provide the driving force that ensures I never cease to learn. 
+
+## 📚 Deep Domain Knowledge
 * [Happy-Quant-Jounrey](https://github.com/quant-beaver) This repo is for sharing resources in quant ecosystem especially python.
   many books and videos to code, for learners eager to explore the depths of quantitative finance and technology.
 
-## Conferences
-
-* 2020-09-07 [신규 서비스 배포 전에 실험과 개선을 반복한 이야기]( https://helloworld.kurly.com/blog/vsms-performance-experiment/ ) - 컬리 기술 블로그
-* 2020-03-09 [새로 입사한 개발자가 프로젝트에 기여하는 방법 한 가지]( https://helloworld.kurly.com/blog/fix-style-with-command/ ) - 컬리 기술 블로그
-* 2020-02-10 [기술 블로그를 다시 디자인하며]( https://helloworld.kurly.com/blog/redesign-tech-blog/ ) - 컬리 기술 블로그
-* 2018-02-26 [MySQL에서 'a' = 'a '가 true로 평가된다?]( https://woowabros.github.io/study/2018/02/26/mysql-char-comparison.html ) - 우아한형제들 기술 블로그
-* 2017-07-06 [레거시 코드를 파괴하는 Vim 벽돌 깨기]( https://woowabros.github.io/tools/2017/07/06/vim-game-code-break.html ) - 우아한형제들 기술 블로그
-* 2016-06-18 [IntelliJ 의 VIM 플러그인 마개조하기]( https://woowabros.github.io/tools/2016/06/18/ideavim-customize-00.html ) - 우아한형제들 기술 블로그
-
-
-## Job Experience
+## 💼 Job Experience
 
 - Software Engineer (Oct 2023 ~ Present)
 - crypto exchange - Software Engineer (Jan 2022 ~ June 2023)
-
-## Public Key
-
-```sh
-curl https://keybase.io/johngrib/key.asc | gpg --import
-```
-
-* <https://keybase.io/johngrib/key.asc >
-
-```
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-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
-Eg==
-=4GMP
------END PGP PUBLIC KEY BLOCK-----
-```
-
-

@@ -35,8 +35,6 @@ regenerate: true
 ## [[/article]]
 
 * [[/article/test1]]
-* [[/article/test2]]
-* [[/article/test3]]
 
 ## [[/system-deisgn]]
 
