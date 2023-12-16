@@ -8,7 +8,7 @@ tag     :
 resource: 0B/BC2D99-A5C1-4A3F-9F6F-016858A735C7
 toc     : true
 public  : true
-parent  : index
+parent  : [[root-index]]
 latex   : false
 comment : false
 ---
