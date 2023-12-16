@@ -9,7 +9,7 @@ regenerate: true
 ---
 
 ## [[/book]]
-* [[/book/2024-books]]
+* [[/book/books-2024]]
 
 ## [[/quant]]
 
