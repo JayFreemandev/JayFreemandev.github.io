@@ -5,7 +5,7 @@ date    : 2023-12-17 20:44:40 +0900
 updated : 2023-12-17 20:44:40 +0900
 toc     : true
 public  : true
-parent  : [[/book/2024]]
+parent  : [[/book]]
 latex   : true
 ---
 * TOC
