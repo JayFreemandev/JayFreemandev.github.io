@@ -8,7 +8,7 @@ tag     :
 resource: 
 toc     : true
 public  : true
-parent  : [[/book]]
+parent  : [[index]]
 latex   : false
 ---
 * TOC
