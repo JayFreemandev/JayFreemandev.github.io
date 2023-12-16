@@ -1,13 +1,15 @@
 ---
 layout  : wiki
-title   : 우리에게는 수학적 사고가 필요하다
-date    : 2023-12-17 20:44:40 +0900
-updated : 2023-12-17 20:44:40 +0900
-resource: A7/953B01-621E-4081-B40C-2BCDA2ECBBB1
+title   : 우리에게는 수학적 사고가 필요하다 
+summary : 
+date    : 2023-12-17 15:28:07 +0900
+updated : 2023-12-17 13:33:37 +0900
+tag     : 
+resource: 
 toc     : true
 public  : true
 parent  : [[/book]]
-latex   : true
+latex   : false
 ---
 * TOC
   {:toc}
