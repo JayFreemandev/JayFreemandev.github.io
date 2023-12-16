@@ -9,10 +9,7 @@ regenerate: true
 ---
 
 ## [[/book]]
-
-* [[/book/test1]]
-* [[/book/test2]]
-* [[/book/test3]]
+* [[/book/2024/math-think]]
 
 ## [[/quant]]
 
