@@ -50,7 +50,7 @@ regenerate: true
 ## Archive
 
 * Memo
-    * [[/2022/2022-03-12-database-connectpool]]
+    * [[/2022]]
     * [[/2023]]
     * [[/2024]]
 

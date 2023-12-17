@@ -1,10 +1,8 @@
 ---
 layout  : wiki
 title   : 우리에게는 수학적 사고가 필요하다 
-summary : 
 date    : 2023-12-17 15:20:51 +0900
 updated : 2023-12-17 16:41:57 +0900
-tag     : 
 toc     : true
 public  : true
 parent  : [[/book]]
