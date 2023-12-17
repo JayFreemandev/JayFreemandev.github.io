@@ -1,7 +1,7 @@
 {
     "triggerTaskOnSave.tasks": {
-        "updateBookProgress": [
-          "*", // <-- Glob pattern to specify which files should trigger the task
-        ],
+        // "updateBookProgress": [
+        //   "*", // <-- Glob pattern to specify which files should trigger the task
+        // ],
       }
 }
