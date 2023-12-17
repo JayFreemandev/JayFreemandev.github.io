@@ -8,47 +8,43 @@ updated : 2023-12-17 14:46:01 +0900
 regenerate: true
 ---
 
-## [[/book]]
-* [[/book/math-think]]
-* [[python-clean-code]]
-* [[think-about-think]]
-* [[mark-wizard]]
-* [[react-intro]]
+## Wiki 
 
-## [[/quant]]
+* [[/book]]
+    * [[/book/math-think]]
+    * [[python-clean-code]]
+    * [[think-about-think]]
+    * [[mark-wizard]]
+    * [[react-intro]]
 
-* [[/quant/test1]]
-* [[/quant/test2]]
-* [[/quant/test3]]
+* [[/quant]]
+    * [[/quant/test1]]
+    * [[/quant/test2]]
+    * [[/quant/test3]]
 
-## [[/finance]]
+* [[/finance]]
+    * [[/finance/test1]]
+    * [[/finance/test2]]
+    * [[/finance/test3]]
 
-* [[/finance/test1]]
-* [[/finance/test2]]
-* [[/finance/test3]]
+* [[/math]]
+    * [[/math/test1]]
+    * [[/math/test2]]
+    * [[/math/test3]]
 
-## [[/math]]
+* [[/article]]
+    * [[/article/test1]]
 
-* [[/math/test1]]
-* [[/math/test2]]
-* [[/math/test3]]
+* [[/system-deisgn]]
+    * [[/system-deisgn/test1]]
+    * [[/system-deisgn/test2]]
+    * [[/system-deisgn/test3]]
 
-## [[/article]]
-
-* [[/article/test1]]
-
-## [[/system-deisgn]]
-
-* [[/system-deisgn/test1]]
-* [[/system-deisgn/test2]]
-* [[/system-deisgn/test3]]
-
-## [[/programming]]
-
-* [[/programming/python]]
-* [[/programming/design-pattern]]
-* [[/programming/oop]]
-* [[/programming/effective-test]]
+* [[/programming]]
+    * [[/programming/python]]
+    * [[/programming/design-pattern]]
+    * [[/programming/oop]]
+    * [[/programming/effective-test]]
 
 ## Archive
 
