@@ -8,7 +8,7 @@ tag     :
 toc     : true
 public  : true
 parent  : [[/book]]
-latex   : false
+latex   : true
 resource: 9625D9D9-BADF-431B-A2F7-4D89D7314447
 ---
 * TOC
