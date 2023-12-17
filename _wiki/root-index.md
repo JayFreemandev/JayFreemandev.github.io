@@ -10,6 +10,10 @@ regenerate: true
 
 ## [[/book]]
 * [[/book/math-think]]
+* [[python-clean-code]]
+* [[think-about-think]]
+* [[mark-wizard]]
+* [[react-intro]]
 
 ## [[/quant]]
 
