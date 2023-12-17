@@ -1,18 +1,21 @@
 ---
 layout  : wiki
 title   : 우리에게는 수학적 사고가 필요하다 
-date    : 2023-12-17 20:44:40 +0900
-updated : 2023-12-17 20:44:40 +0900
+summary : 
+date    : 2023-12-17 15:20:51 +0900
+updated : 2023-12-17 16:41:57 +0900
+tag     : 
 toc     : true
 public  : true
-parent  : [[index]]
-latex   : true
+parent  : [[book]]
+latex   : false
+resource: 9625D9D9-BADF-431B-A2F7-4D89D7314447
 ---
 * TOC
-  {:toc}
+{:toc}
 
 ## 우리에게는 수학적 사고가 필요하다 
-### 0% 0 / 234
+### 0% 1 / 234
 
 * [X] 1. 수학적 사고의 정체
     * [X] 2023-12-17 01. 질문에서부터 시작하자

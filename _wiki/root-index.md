@@ -4,12 +4,13 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2022-12-07 23:01:03 +0900
+updated : 2023-12-17 14:46:01 +0900
 regenerate: true
 ---
 
 ## [[/book]]
-* [[math-book-01]]
+* [[math-think]]
+* [[test]]
 
 ## [[/quant]]
 
