@@ -10,7 +10,6 @@ regenerate: true
 
 ## [[/book]]
 * [[/book/math-think]]
-* [[test]]
 
 ## [[/quant]]
 
