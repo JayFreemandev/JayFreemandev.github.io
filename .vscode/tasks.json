@@ -2,12 +2,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "updateBookProgress",
+            "label": "precommit",
             "type": "shell",
             "command": "/bin/bash",
             "args": [
                 "-c",
-                "sh /Users/jay/book.sh ${file}"
+                "sh /Users/jay/Desktop/wiki/JayFreemandev.github.io/tool/pre-commit  ${file}"
             ],
             "group": {
                 "kind": "build",
