@@ -5,7 +5,7 @@ date    : 2023-12-17 20:44:40 +0900
 updated : 2023-12-17 20:44:40 +0900
 toc     : true
 public  : true
-parent  : [[/2023]]
+parent  : [[/book]]
 latex   : true
 resource: 9625D9D9-BADF-431B-A2F7-4D89D7314447
 ---

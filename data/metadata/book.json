@@ -6,9 +6,10 @@
  "url": "/wiki/book",
  "updated": "2022-12-06 21:35:00 +0900",
  "children": [
-  "mark-wizard",
-  "python-clean-code",
-  "react-intro",
-  "think-about-think"
+  "book/mark-wizard",
+  "book/math-think",
+  "book/python-clean-code",
+  "book/react-intro",
+  "book/think-about-think"
  ]
 }

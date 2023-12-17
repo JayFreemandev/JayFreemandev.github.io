@@ -12,10 +12,10 @@ regenerate: true
 
 * [[/book]]
     * [[/book/math-think]]
-    * [[python-clean-code]]
-    * [[think-about-think]]
-    * [[mark-wizard]]
-    * [[react-intro]]
+    * [[/book/python-clean-code]]
+    * [[/book/think-about-think]]
+    * [[/book/mark-wizard]]
+    * [[/book/react-intro]]
 
 * [[/quant]]
     * [[/quant/test1]]
