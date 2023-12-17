@@ -7,7 +7,7 @@ updated : 2023-12-17 18:20:58 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : book
+parent  : [[book]]
 latex   : false
 resource: 64A3D827-4254-43A4-AF4A-846A63C308A2
 ---
