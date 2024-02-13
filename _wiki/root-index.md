@@ -20,14 +20,10 @@ regenerate: true
     * [[/finance/pension]]
 
 * [[/math]]
-    * [[/math/test1]]
-    * [[/math/test2]]
-    * [[/math/test3]]
+    * [[/math/gcd]]
 
 * [[/system-deisgn]]
     * [[/system-deisgn/test1]]
-    * [[/system-deisgn/test2]]
-    * [[/system-deisgn/test3]]
 
 * [[/programming]]
     * [[/programming/python]]
