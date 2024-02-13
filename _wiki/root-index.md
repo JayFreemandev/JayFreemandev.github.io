@@ -22,6 +22,9 @@ regenerate: true
 * [[/math]]
     * [[/math/gcd]]
 
+* [[crypto]]
+    * [[/crypto/my-wallet]]
+
 * [[/system-deisgn]]
     * [[/system-deisgn/test1]]
 
@@ -30,11 +33,14 @@ regenerate: true
     * [[/programming/design-pattern]]
     * [[/programming/oop]]
     * [[/programming/effective-test]]
+    * [[/programming/sql]]
 
+
+## Lifehack
 * [[/health]]
 
-## Archive
 
+## Archive
 * [[memo]]
     * [[/memo/2024]]
 
