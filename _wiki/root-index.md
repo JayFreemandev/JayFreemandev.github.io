@@ -11,29 +11,18 @@ regenerate: true
 ## Wiki 
 
 * [[/book]]
-    * [[/book/math-think]]
-    * [[/book/python-clean-code]]
-    * [[/book/think-about-think]]
-    * [[/book/mark-wizard]]
-    * [[/book/react-intro]]
+    * [[/book/2024]]
 
 * [[/quant]]
-    * [[/quant/test1]]
-    * [[/quant/test2]]
-    * [[/quant/test3]]
+    * [[/quant/how-to-break-goldman-sache]]
 
 * [[/finance]]
-    * [[/finance/test1]]
-    * [[/finance/test2]]
-    * [[/finance/test3]]
+    * [[/finance/pension]]
 
 * [[/math]]
     * [[/math/test1]]
     * [[/math/test2]]
     * [[/math/test3]]
-
-* [[/article]]
-    * [[/article/test1]]
 
 * [[/system-deisgn]]
     * [[/system-deisgn/test1]]
@@ -46,16 +35,14 @@ regenerate: true
     * [[/programming/oop]]
     * [[/programming/effective-test]]
 
+* [[/health]]
+
 ## Archive
 
-* Memo
-    * [[/2022]]
-    * [[/2023]]
-    * [[/2024]]
+* [[Memo]]
+    * [[/memo/2024]]
 
 * [[/links]]
-    * [[/links/2022]]
-    * [[/links/2023]]
     * [[/links/2024]]
 
 * [[/review]]
@@ -64,8 +51,6 @@ regenerate: true
     * [[/review/2024]]
 
 ---
-
-## blog posts
 <div>
     <ul>
 {% for post in site.posts %}
