@@ -35,7 +35,7 @@ regenerate: true
 
 ## Archive
 
-* [[Memo]]
+* [[memo]]
     * [[/memo/2024]]
 
 * [[/links]]
