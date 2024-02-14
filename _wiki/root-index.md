@@ -8,8 +8,7 @@ updated : 2023-12-17 14:46:01 +0900
 regenerate: true
 ---
 
-### Quant 
-* [[/quant]]
+### [[/quant]] 
 
 
 ### [[/programming]]
@@ -27,23 +26,20 @@ regenerate: true
 * [[/programming/system-deisgn]]
     * [[/programming/system-deisgn/test]]  
 
-### Math
-* [[/math]]
-    * [[/math/gcd]]
+### [[/math]]
+* [[/math/gcd]]
 
-### Finance
-* [[/finance]]
-    * [[/finance/pension]]
+### [[/finance]]
+* [[/finance/pension]]
 
-### Crypto
-* [[crypto]]
-    * [[/crypto/my-wallet]]
+### [[/crypto]]
+* [[/crypto/my-wallet]]
 
-### Conference and Article
-* [[summary]]
-    * [[/summary/how-to-break-goldman-sache]]
-### Lifehack
-* [[/health]]
+### [[/summary]]
+* [[/summary/how-to-break-goldman-sache]]
+
+### [[/lifehack]]
+* [[/lifehack/health]]
 
 ### Archive
 * [[/book]]

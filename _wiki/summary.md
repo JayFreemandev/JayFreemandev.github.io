@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : Summary
+title   : Conference and Article 
 summary : 
 date    : 2024-02-14 23:53:32 +0900
 updated : 2024-02-14 23:53:32 +0900
