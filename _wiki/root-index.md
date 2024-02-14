@@ -13,8 +13,10 @@ regenerate: true
 
 
 ### [[/programming]]
+* [[/programming/python]]
 * [[/python]]
     * [[/programming/design-pattern]]
+    * 
     * [[/programming/oop]]
     * [[/programming/effective-test]]
     * [[/programming/sql]]
