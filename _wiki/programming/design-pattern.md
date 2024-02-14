@@ -1,5 +1,5 @@
 ---
-layout  : wiki
+layout  : category 
 title   : 디자인패턴 
 summary : 
 date    : 2024-02-14 00:19:52 +0900

@@ -1,5 +1,5 @@
 ---
-layout  : wiki
+layout  : category 
 title   : 객체지향 
 summary : 
 date    : 2024-02-14 00:20:17 +0900

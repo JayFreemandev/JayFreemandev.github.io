@@ -1,5 +1,5 @@
 ---
-layout  : wiki
+layout  : category 
 title   : SQL 
 summary : 
 date    : 2024-02-14 01:06:57 +0900

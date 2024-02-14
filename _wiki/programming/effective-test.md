@@ -1,5 +1,5 @@
 ---
-layout  : wiki
+layout  : category 
 title   : 테스트코드 
 summary : 
 date    : 2024-02-14 00:20:40 +0900

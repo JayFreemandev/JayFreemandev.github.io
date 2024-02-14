@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : 파이썬썬
+title   : 파이썬
 summary : 
 date    : 2024-02-15 00:07:47 +0900
 updated : 2024-02-15 00:07:47 +0900
