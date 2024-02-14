@@ -1,5 +1,5 @@
 ---
-layout  : wiki
+layout  : cateogry 
 title   : 파이썬 
 summary : 
 date    : 2024-02-14 00:19:16 +0900

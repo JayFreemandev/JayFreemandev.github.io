@@ -8,39 +8,42 @@ updated : 2023-12-17 14:46:01 +0900
 regenerate: true
 ---
 
-## Wiki 
-
-* [[/book]]
-    * [[/book/2024]]
-
+### Quant 
 * [[/quant]]
-    * [[/quant/how-to-break-goldman-sache]]
 
-* [[/finance]]
-    * [[/finance/pension]]
 
-* [[/math]]
-    * [[/math/gcd]]
-
-* [[crypto]]
-    * [[/crypto/my-wallet]]
-
-* [[/system-deisgn]]
-    * [[/system-deisgn/test1]]
-
+### Programming
 * [[/programming]]
     * [[/programming/python]]
     * [[/programming/design-pattern]]
     * [[/programming/oop]]
     * [[/programming/effective-test]]
     * [[/programming/sql]]
+* [[/system-deisgn]]
+    * [[/system-deisgn/test1]]  
 
+### Math
+* [[/math]]
+    * [[/math/gcd]]
 
-## Lifehack
+### Finance
+* [[/finance]]
+    * [[/finance/pension]]
+
+### Crypto
+* [[crypto]]
+    * [[/crypto/my-wallet]]
+
+### Conference and Article
+* [[summary]]
+    * [[/summary/how-to-break-goldman-sache]]
+### Lifehack
 * [[/health]]
 
+### Archive
+* [[/book]]
+    * [[/book/2024]]
 
-## Archive
 * [[memo]]
     * [[/memo/2024]]
 
