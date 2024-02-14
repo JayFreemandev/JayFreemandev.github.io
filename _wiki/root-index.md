@@ -12,9 +12,8 @@ regenerate: true
 * [[/quant]]
 
 
-### Programming
-* [[/programming]]
-    * [[/programming/python]]
+### [[/programming]]
+* [[/python]]
     * [[/programming/design-pattern]]
     * [[/programming/oop]]
     * [[/programming/effective-test]]
