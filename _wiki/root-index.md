@@ -14,15 +14,10 @@ regenerate: true
 ##### [[/programming]]
 * [[/programming/python]]
     * [[/programming/python/test]]
-
 * [[/programming/design-pattern]]
-
 * [[/programming/oop]]
-
 * [[/programming/effective-test]]
-
 * [[/programming/sql]]
-
 * [[/programming/system-deisgn]]
     * [[/programming/system-deisgn/test]]  
 
