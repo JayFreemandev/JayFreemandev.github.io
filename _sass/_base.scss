@@ -112,6 +112,7 @@ h5 {
     font-size: 1.2em;
     padding-left: 10px;
     font-style: italic;
+    margin-block-end: unset
 }
 .post-content h5 {
     &:before { content:"⠛"; }
