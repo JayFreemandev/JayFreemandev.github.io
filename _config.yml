@@ -39,9 +39,9 @@ collections:
 # Comment Service
 giscus:
   repo: JayFreemandev/JayFreemandev.github.io
-  repo_id: SAMPLE-VALUE
+  repo_id: R_kgDOK4pOCQ
   category: Announcements
-  category_id: SAMPLE-VALUE
+  category_id: DIC_kwDOK4pOCc4CdQve
 
 google_analytics:
   ua: SAMPLE-VALUE
