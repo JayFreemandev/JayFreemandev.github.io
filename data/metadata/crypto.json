@@ -9,6 +9,7 @@
  "children": [
   "crypto/koii-network",
   "crypto/my-wallet",
+  "crypto/stacks",
   "crypto/ton"
  ]
 }

@@ -32,6 +32,8 @@ regenerate: true
 * [[/crypto/koii-network]]
 * [[/crypto/ton]]
    * [[/crypto/ton/notcoin]]
+* [[/crypto/stacks]]
+
 
 ##### [[/summary]]
 * [[/summary/how-to-break-goldman-sache]]
