@@ -44,8 +44,7 @@ giscus:
   category_id: DIC_kwDOK4pOCc4CdQve
 
 google_analytics:
-  ua: UA-236016880-1
-  encrypted_ua: UA-236016880-1
+  ga: 428077519
 
 google_adsense:
   client: pub-1852874037333345
