@@ -52,7 +52,7 @@
         gtag('config', 'G-{{ site.google_analytics.ga }}');
     </script>
 {% endif %}
-{% if site.google_adsense.client %}
+{% if site.google_adsense.client and page.adsense == true %}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
