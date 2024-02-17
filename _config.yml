@@ -44,8 +44,8 @@ giscus:
   category_id: DIC_kwDOK4pOCc4CdQve
 
 google_analytics:
-  ua: UA-236016880-1
-  encrypted_ua: THIS-IS-SAMPLE-VALUE
+  ua: 428077519
+  encrypted_ua: 428077519
 
 google_adsense:
   client: pub-1852874037333345
