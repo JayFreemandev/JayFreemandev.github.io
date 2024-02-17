@@ -44,11 +44,11 @@ giscus:
   category_id: DIC_kwDOK4pOCc4CdQve
 
 google_analytics:
-  ua: SAMPLE-VALUE
+  ua: UA-236016880-1
   encrypted_ua: THIS-IS-SAMPLE-VALUE
 
 google_adsense:
-  client: SAMPLE-VALUE
+  client: pub-1852874037333345
 
 blame: "https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki"
 edit: "https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki"
