@@ -37,6 +37,11 @@ regenerate: true
 
 ##### [[/summary]]
 * [[/summary/how-to-break-goldman-sache]]
+* [[/summary/persona]]
+* [[/summary/20-percent-project]]
+
+
+
 
 ##### [[/lifehack]]
 * [[/lifehack/health]]
