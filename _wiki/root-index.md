@@ -26,6 +26,7 @@ regenerate: true
 
 ##### [[/finance]]
 * [[/finance/pension]]
+* [[/finance/volatility]]
 
 ##### [[/crypto]]
 * [[/crypto/my-wallet]]
