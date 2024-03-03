@@ -23,6 +23,7 @@ regenerate: true
 
 ##### [[/math]]
 * [[/math/gcd]]
+* [[/math/standard-deviation]]
 
 ##### [[/finance]]
 * [[/finance/pension]]
