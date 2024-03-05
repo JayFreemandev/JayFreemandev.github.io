@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : Ton network
+title   : ton
 summary : 
 date    : 2024-02-16 00:31:26 +0900
 updated : 2024-02-16 00:31:26 +0900

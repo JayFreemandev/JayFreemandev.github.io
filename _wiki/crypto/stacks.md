@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : Stacks
+title   : stacks
 summary : 
 date    : 2024-02-18 01:44:29 +0900
 updated : 2024-02-18 01:44:29 +0900

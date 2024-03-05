@@ -1,7 +1,7 @@
 ---
 layout  : wiki
-title   : Koii network 
-summary : Ton, notcoin
+title   : koii 
+summary : notcoin event에서 발견한 잉어 코인
 date    : 2024-02-16 00:06:07 +0900
 updated : 2024-02-16 00:06:07 +0900
 tag     : 

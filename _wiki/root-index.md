@@ -35,6 +35,8 @@ regenerate: true
 * [[/crypto/ton]]
    * [[/crypto/ton/notcoin]]
 * [[/crypto/stacks]]
+* [[/crypto/pixels]]
+* 
 
 
 ##### [[/summary]]
