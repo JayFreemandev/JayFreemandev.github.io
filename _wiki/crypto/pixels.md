@@ -34,15 +34,7 @@ $PIXEL은 5,000,000,000 공급량으로 제한되는 공급 토큰 $PIXEL의 15.
 - 3000+ = 30% multiplier
 
 ### 자원 
-**Resource Rarities**  
-특정 희귀도는 특정 유형의 토지에서만 찾을 수 있습니다.  
-Level 1 - Common  
-Level 2 - Special  
-Level 3 - Remarkable  
-Level 4 - Amazing  
-Level 5 - Legendary  
 
-### 평판
 
 
 ### 에너지
@@ -52,9 +44,12 @@ Level 5 - Legendary
 - 20시간 아무것도 안하기 475 회복(12시 종료 ~ 오후 8시 시작 기준 20시간)
 -> 675 회복
 
-플레인오믈렛 2계란 1회복 10초, 분당 6 회복이라 요리 경험치를 올리고 드링크구매
+플레인오믈렛 2계란 1회복 10초, 분당 6 회복이라 요리 경험치를 올리고 드링크구매  
+팝베리와인 10개 770회복(15000 베리 가치)  
 
-팝베리와인 10개 770회복(15000 베리 가치)
-
-
-
+## Reference links
+### [퀘스트](https://web3triads.com/quests/)
+### [마켓](https://www.pixels.tips/energy)
+### [땅찾기](https://pixelstools.xyz/dashboard/buscar-lands)
+### [땅가격](https://opensea.io/collection/pixels-farm)
+- 1.235 ETH 시작 3월 10일 기준 최저가 1.3 시작
