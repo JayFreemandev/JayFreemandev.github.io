@@ -59,6 +59,22 @@ bbq quest sereies -> 210
 ### [퀘스트](https://web3triads.com/quests/)
 ### [마켓](https://www.pixels.tips/energy)
 ### [땅찾기](https://pixelstools.xyz/dashboard/buscar-lands)
+우주 광산
+- 93
+- 192
+- 197
+- 204
+- 233
+물 땅
+- 1182
+- 1337
+- 1664
+벌집
+- 1629
+- 2027
+- 2074
+- 2072
+- 2499
 ### [땅가격](https://opensea.io/collection/pixels-farm)
 - 1.235 ETH 시작 3월 10일 기준 최저가 1.3 시작
 
