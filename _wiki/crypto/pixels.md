@@ -33,9 +33,17 @@ $PIXEL은 5,000,000,000 공급량으로 제한되는 공급 토큰 $PIXEL의 15.
 - 2000+ = 20% multiplier
 - 3000+ = 30% multiplier
 
+### 평판
+social -> 300
+flour -> 50
+milkshake -> 150
+---- market access ----
+
+popberry wine 50
+bbq quest sereies -> 210
+--- user trade ---
+
 ### 자원 
-
-
 
 ### 에너지
 ![energy](https://github.com/JayFreemandev/JayFreemandev.github.io/assets/72185011/3345dac6-8773-4be8-9aa8-62af66199c9e)
@@ -53,3 +61,7 @@ $PIXEL은 5,000,000,000 공급량으로 제한되는 공급 토큰 $PIXEL의 15.
 ### [땅찾기](https://pixelstools.xyz/dashboard/buscar-lands)
 ### [땅가격](https://opensea.io/collection/pixels-farm)
 - 1.235 ETH 시작 3월 10일 기준 최저가 1.3 시작
+
+<hr>
+bit master reputation 2000 달성(출금가능)
+bit slave01 reputation
