@@ -28,6 +28,7 @@ regenerate: true
 ##### [[/finance]]
 * [[/finance/pension]]
 * [[/finance/volatility]]
+* [[/finance/single-price-auction-call]]
 
 ##### [[/crypto]]
 * [[/crypto/my-wallet]]
