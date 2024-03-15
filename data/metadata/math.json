@@ -8,6 +8,7 @@
  "resource": "DFD074C4-5FC1-453E-BFB8-F11C19B0FDBB",
  "children": [
   "math/gcd",
-  "math/standard-deviation"
+  "math/standard-deviation",
+  "math/time-weighted-return"
  ]
 }

@@ -24,6 +24,7 @@ regenerate: true
 ##### [[/math]]
 * [[/math/gcd]]
 * [[/math/standard-deviation]]
+* [[/math/time-weighted-return]]
 
 ##### [[/finance]]
 * [[/finance/pension]]
