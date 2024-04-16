@@ -32,10 +32,6 @@ regenerate: true
 * [[/finance/single-price-auction-call]]
 
 ##### [[/crypto]]
-* [[/crypto/koii-network]]
-* [[/crypto/ton]]
-   * [[/crypto/ton/notcoin]]
-* [[/crypto/stacks]]
 * [[/crypto/pixels]]
    * [[/crypto/pixels/journey]] 
 
