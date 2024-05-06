@@ -46,6 +46,8 @@ regenerate: true
 
 ##### [[/lifehack]]
 * [[/lifehack/health]]
+* [[/lifehack/paper]]
+
 
 ##### Archive
 * [[/book]]
