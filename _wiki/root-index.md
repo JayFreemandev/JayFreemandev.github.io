@@ -20,6 +20,10 @@ regenerate: true
 * [[/programming/sql]]
 * [[/programming/system-deisgn]]
     * [[/programming/system-deisgn/test]]  
+* [[/programming/dbeaver]]
+* [[/programming/faield-k8s-deploy]]
+ 
+
 
 ##### [[/math]]
 * [[/math/gcd]]
@@ -33,15 +37,12 @@ regenerate: true
 
 ##### [[/crypto]]
 * [[/crypto/pixels]]
-   * [[/crypto/pixels/journey]] 
 
 
 ##### [[/summary]]
 * [[/summary/how-to-break-goldman-sache]]
 * [[/summary/persona]]
 * [[/summary/20-percent-project]]
-
-
 
 
 ##### [[/lifehack]]
