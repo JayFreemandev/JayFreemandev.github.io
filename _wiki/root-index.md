@@ -29,6 +29,8 @@ regenerate: true
 * [[/math/gcd]]
 * [[/math/standard-deviation]]
 * [[/math/time-weighted-return]]
+* [[/math/intersections-of-equations]]
+
 
 ##### [[/finance]]
 * [[/finance/pension]]
