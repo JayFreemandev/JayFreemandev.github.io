@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jayfreemandev.tech/sitemap.xml
+Sitemap: https://www.jayfreemandev.github.io/sitemap.xml
