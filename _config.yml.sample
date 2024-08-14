@@ -11,7 +11,7 @@ author:
 profile:
 twitter_username:
 github_username:
-comment-support:
+comment-support: test
 
 # Build settings
 plugins:
