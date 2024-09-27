@@ -8,6 +8,7 @@
  "resource": "F266E10D-1F95-4D6D-A055-3477818DB884",
  "children": [
   "lifehack/health",
-  "lifehack/paper"
+  "lifehack/paper",
+  "lifehack/productivity"
  ]
 }

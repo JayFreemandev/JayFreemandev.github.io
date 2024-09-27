@@ -37,9 +37,6 @@ regenerate: true
 * [[/finance/volatility]]
 * [[/finance/single-price-auction-call]]
 
-##### [[/crypto]]
-* [[/crypto/pixels]]
-
 
 ##### [[/summary]]
 * [[/summary/how-to-break-goldman-sache]]
@@ -50,7 +47,7 @@ regenerate: true
 ##### [[/lifehack]]
 * [[/lifehack/health]]
 * [[/lifehack/paper]]
-
+* [[/lifehack/productivity]]
 
 ##### Archive
 * [[/book]]
