@@ -51,11 +51,11 @@ resource: 265E9BA6-D87E-4E0C-BF6A-139823BEBF50
 <div style="display: flex; justify-content: space-around; align-items: center;">
     <img src="https://github.com/user-attachments/assets/1b173768-cd24-4e8f-9c6e-fa6a4fd2bedf" width="45%">
     <img src="https://github.com/user-attachments/assets/6b7c126b-c177-4e51-9428-64576f90fabf" width="45%">
-https://github.com/user-attachments/assets/6b7c126b-c177-4e51-9428-64576f90fabf
 </div>
 </br>
 
-세금 관련 문서는 6년치 세금 신고 자료를 포함해 종이로 보관. 캐나다 정부에서 이렇게 6년치를 보관한다고 한다. 소득 증명서, 청구서 영수증, 관리비, 보험, 월급, 자동차 수리, 약값 영수증 등이 분류.
+세금 관련 문서는 6년치 세금 신고 자료를 포함해 종이로 보관. 캐나다 정부에서 이렇게 6년치를 보관한다고 한다. 
+소득 증명서, 청구서 영수증, 관리비, 보험, 월급, 자동차 수리, 약값 영수증 등이 분류.
 <div style="display: flex; justify-content: space-around; align-items: center;">
     <img src="https://github.com/user-attachments/assets/160905f3-8e20-4237-a401-de53cea0e0dc" width="45%">
 
@@ -67,7 +67,8 @@ https://github.com/user-attachments/assets/6b7c126b-c177-4e51-9428-64576f90fabf
 간직하고 싶은 최소한의 추억들을 따로 분리한다.
 
 ## 결론
-원본이 필요없는 파일들은 스캔해서 컴퓨터에 pdf로 보관하는 방식으로 관리하는게 좋을거같다. 지금까지본 사람들중에 종이 문서를 가장 잘 활용중인 영상이다.
+원본이 필요없는 파일들은 스캔해서 컴퓨터에 pdf로 보관하는 방식으로 관리하는게 좋을거같다. 
+지금까지본 사람들중에 종이 문서를 가장 잘 활용중인 영상이다.
 
 reference  
 https://www.youtube.com/watch?v=DIkZ7pYiHFI
