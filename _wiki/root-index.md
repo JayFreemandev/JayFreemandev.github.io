@@ -53,7 +53,7 @@ regenerate: true
 * [[/book]]
     * [[/book/2024]]
 
-* [[memo]]
+* [[/memo]]
     * [[/memo/2024]]
 
 * [[/links]]
