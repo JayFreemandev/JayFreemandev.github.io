@@ -1,0 +1,12 @@
+{
+ "type": "wiki",
+ "title": "DevOps",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/infra",
+ "updated": "2025-02-22 03:15:22 +0900",
+ "resource": "3D8596DA-1F96-43BE-978D-5C81F9532B77",
+ "children": [
+  "infra/kubernetes"
+ ]
+}

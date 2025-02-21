@@ -9,60 +9,55 @@ regenerate: true
 ---
 
 ##### [[/quant]] 
+- [[/quant/petrocurrency]] 
 
-
-##### [[/programming]]
-* [[/programming/python]]
-    * [[/programming/python/test]]
-* [[/programming/design-pattern]]
-* [[/programming/oop]]
-* [[/programming/effective-test]]
-* [[/programming/sql]]
-* [[/programming/system-deisgn]]
-    * [[/programming/system-deisgn/test]]  
-* [[/programming/dbeaver]]
-* [[/programming/faield-k8s-deploy]]
- 
-
+##### [[/solana]]
+- [[/solana/architecture]]
 
 ##### [[/math]]
-* [[/math/gcd]]
-* [[/math/standard-deviation]]
-* [[/math/time-weighted-return]]
-* [[/math/intersections-of-equations]]
+- [[/math/gcd]]
+- [[/math/standard-deviation]]
+- [[/math/time-weighted-return]]
+- [[/math/intersections-of-equations]]
 
+##### [[/programming]]
+- [[/programming/python]]
+- [[/programming/rust]]
+- [[/programming/sql]]
+- [[/programming/system-design]]
+
+#### [[/infra]]
+- [[/infra/kubernetes]]
 
 ##### [[/finance]]
-* [[/finance/pension]]
-* [[/finance/volatility]]
-* [[/finance/single-price-auction-call]]
-
+- [[/finance/pension]]
+- [[/finance/volatility]]
+- [[/finance/single-price-auction-call]]
 
 ##### [[/summary]]
-* [[/summary/how-to-break-goldman-sache]]
-* [[/summary/persona]]
-* [[/summary/20-percent-project]]
-
+- [[/summary/how-to-break-goldman-sache]]
+- [[/summary/persona]]
+- [[/summary/20-percent-project]]
 
 ##### [[/lifehack]]
-* [[/lifehack/health]]
-* [[/lifehack/paper]]
-* [[/lifehack/productivity]]
+- [[/lifehack/health]]
+- [[/lifehack/paper]]
+- [[/lifehack/productivity]]
 
 ##### Archive
-* [[/book]]
-    * [[/book/2024]]
+- [[/book]]
+    - [[/book/2024]]
 
-* [[/memo]]
-    * [[/memo/2024]]
+- [[/memo]]
+    - [[/memo/2024]]
 
-* [[/links]]
-    * [[/links/2024]]
-
-* [[/review]]
-    * [[/review/2022]]
-    * [[/review/2023]]
-    * [[/review/2024]]
+- [[/links]]
+    - [[/links/2024]]
+    - [[/links/2025]]
+- [[/review]]
+    - [[/review/2022]]
+    - [[/review/2023]]
+    - [[/review/2024]]
 
 ---
 <div>

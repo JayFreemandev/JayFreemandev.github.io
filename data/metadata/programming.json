@@ -12,7 +12,9 @@
   "programming/effective-test",
   "programming/oop",
   "programming/python",
+  "programming/rust",
   "programming/sql",
-  "programming/system-deisgn"
+  "programming/system-deisgn",
+  "programming/system-design"
  ]
 }
