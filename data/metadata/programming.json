@@ -8,13 +8,9 @@
  "resource": "0B/BC2D99-A5C1-4A3F-9F6F-016858A735C5",
  "children": [
   "programming/dbeaver",
-  "programming/design-pattern",
-  "programming/effective-test",
-  "programming/oop",
   "programming/python",
   "programming/rust",
   "programming/sql",
-  "programming/system-deisgn",
   "programming/system-design"
  ]
 }

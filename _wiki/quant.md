@@ -14,3 +14,6 @@ comment : false
 ---
 * TOC
 {:toc}
+
+---
+[[/quant/job-market-trend]]
