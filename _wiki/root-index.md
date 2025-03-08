@@ -7,7 +7,6 @@ comment : false
 updated : 2023-12-17 14:46:01 +0900
 regenerate: true
 ---
-
 ##### [[/quant]] 
 - [[/quant/petrocurrency]] 
 
@@ -26,7 +25,7 @@ regenerate: true
 - [[/programming/sql]]
 - [[/programming/system-design]]
 
-#### [[/infra]]
+##### [[/infra]]
 - [[/infra/kubernetes]]
 
 ##### [[/finance]]
@@ -45,20 +44,19 @@ regenerate: true
 - [[/lifehack/productivity]]
 
 ##### Archive
-- [[/book]]
-    - [[/book/2024]]
-
 - [[/memo]]
     - [[/memo/2024]]
-
+    - [[/memo/2025]]
+    
 - [[/links]]
     - [[/links/2024]]
     - [[/links/2025]]
+
 - [[/review]]
     - [[/review/2022]]
     - [[/review/2023]]
     - [[/review/2024]]
-
+    - [[/review/2025]]
 ---
 <div>
     <ul>
