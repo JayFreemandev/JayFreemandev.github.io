@@ -31,7 +31,7 @@ regenerate: true
     <H3 class="indent">Recently changed</H3>
     <ul class="post-list">
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
-{% for doc in documents limit: 30 %}
+{% for doc in documents limit: 10 %}
     {% if doc.public == true and doc.title != 'wiki'%}
         <li>
             <div class="post-item">
