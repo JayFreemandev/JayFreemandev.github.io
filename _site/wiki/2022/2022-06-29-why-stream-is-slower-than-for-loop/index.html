@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>Why steam is slower than for loop(performance benchmark) - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Why steam is slower than for loop(performance benchmark)">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/" />
+    <meta name="twitter:title" content="Why steam is slower than for loop(performance benchmark)" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2022/why-stream-is-slower-than-for-loop"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/"> Why steam is slower than for loop(performance benchmark) </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/why-stream-is-slower-than-for-loop.md" target="_blank">created: 2022.06.29</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/why-stream-is-slower-than-for-loop.md" target="_blank">updated: 2022.06.29</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2022/why-stream-is-slower-than-for-loop.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=Why+steam+is+slower+than+for+loop%28performance+benchmark%29&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#java-stream-vs-for-loop-unveiling-the-performance-dynamics" id="markdown-toc-java-stream-vs-for-loop-unveiling-the-performance-dynamics"><strong>Java Stream vs. For Loop: Unveiling the Performance Dynamics</strong></a></li>
+  <li><a href="#quick-conclusion" id="markdown-toc-quick-conclusion"><strong>Quick Conclusion</strong></a></li>
+  <li><a href="#performance-comparison-readability-as-the-deciding-factor" id="markdown-toc-performance-comparison-readability-as-the-deciding-factor"><strong>Performance Comparison: Readability as the Deciding Factor</strong></a></li>
+  <li><a href="#overhead-considerations" id="markdown-toc-overhead-considerations"><strong>Overhead Considerations</strong></a></li>
+  <li><a href="#jit-compiler-is-optimized-to-for-loop" id="markdown-toc-jit-compiler-is-optimized-to-for-loop"><strong>JIT compiler is optimized to for loop</strong></a></li>
+  <li><a href="#benchmarking-experiment-by-adam-ruka" id="markdown-toc-benchmarking-experiment-by-adam-ruka"><strong>Benchmarking Experiment by Adam Ruka</strong></a></li>
+  <li><a href="#other-disadvantages" id="markdown-toc-other-disadvantages"><strong>Other Disadvantages</strong></a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion"><strong>conclusion</strong></a></li>
+</ul>
+
+<h3 id="java-stream-vs-for-loop-unveiling-the-performance-dynamics"><strong>Java Stream vs. For Loop: Unveiling the Performance Dynamics</strong></h3>
+<p>Java 8 introduced streams, offering code that's often more readable than traditional for loops. Despite the enhanced 
+readability, a lingering question persists: Why might Java streams incur a performance hit compared to for loops? 
+Let's delve into the intricacies.</p>
+
+<h3 id="quick-conclusion"><strong>Quick Conclusion</strong></h3>
+<p>Brian Goetz, a notable figure in the Java community, emphasizes the paramount importance of code clarity and readability. 
+For 99% of cases, prioritize clear, maintainable, and correct code.
+– <a href="https://stackoverflow.com/users/3553087/brian-goetz">Brian Goetz</a> -</p>
+
+<h3 id="performance-comparison-readability-as-the-deciding-factor"><strong>Performance Comparison: Readability as the Deciding Factor</strong></h3>
+<p>The general speed differences between streams and loops aren't substantial; their pros and cons are context-dependent. 
+Deciding between them should primarily hinge on code readability. Benchmark comparisons, provide insights into the performance 
+nuances.</p>
+
+<h3 id="overhead-considerations"><strong>Overhead Considerations</strong></h3>
+<p>Functional Interface Overhead:
+Functional interfaces use generic parameters, limiting them to reference types. Auto boxing, the conversion of primitives 
+to references, introduces overhead. Stream API provides specialized primitive streams (e.g., IntStream) to mitigate this.</p>
+
+<p>External Iterator in For Loop:
+For loops use an external iterator, whereas streams rely on internal iteration. Primitive types in for loops often reside 
+in the stack, reducing overhead.</p>
+
+<p>When Stream Might Outperform:
+Stream performance may excel when dealing with heavy functions and wrapped types, especially when iterator and functional 
+costs are significant.</p>
+
+<h3 id="jit-compiler-is-optimized-to-for-loop"><strong>JIT compiler is optimized to for loop</strong></h3>
+<p>The Just-In-Time (JIT) compiler tends to optimize for loops more effectively, as illustrated in the provided image.
+<img src="https://user-images.githubusercontent.com/72185011/206899755-b4286de3-c8b5-44f1-8dec-6c49a17c8496.png" alt="Untitled" />
+<br />
+<br /></p>
+
+<h3 id="benchmarking-experiment-by-adam-ruka"><strong>Benchmarking Experiment by Adam Ruka</strong></h3>
+<p>Adam Ruka conducted a benchmarking experiment comparing Java 8 Stream API and traditional for loops. Results demonstrated 
+comparable performance, with the Stream API occasionally outperforming in specific scenarios.</p>
+
+<p>He was wondering himself and wrote code to benchmark, we can see his original code on <a href="https://github.com/skinny85/no-more-loops-benchmark">GitHub</a>
+There are the result of 10,000 randomly generated Article objects on his computer.</p>
+
+<p><img src="https://user-images.githubusercontent.com/72185011/206899762-190c88b7-22c6-4c0e-9b4f-506c878e1025.png" alt="Untitled 1" />
+Adam Ruka’s No More Loops Benchmark result, <a href="https://www.endoflineblog.com/benchmarking-java8-streams">https://www.endoflineblog.com/benchmarking-java8-streams</a></p>
+
+<p>Result seem similar loop and stream. first one(getFirstJavaArticle()) by 16%, second one(getDistinctTags()) by 24%. 
+The Performance of the Stream API show betters compared to for loop in some cases. Therefore, Performance issue can not 
+be a consideration.
+<br /><br />
+<br /></p>
+
+<h3 id="other-disadvantages"><strong>Other Disadvantages</strong></h3>
+<ul>
+  <li>
+    <p>Performance Priority:
+Unless your industry demands a 1% performance increase and it's a top priority, 
+the marginal performance differences are inconsequential. Choose for loops for general use cases.</p>
+  </li>
+  <li>
+    <p>Debuggers:
+Debugging stream code might be more challenging than for loops, particularly when stepping through filters and mapping 
+operations.</p>
+  </li>
+  <li>
+    <p>Cognitive Overhead:
+Streams should be avoided for small datasets due to unnecessary memory and CPU overhead.</p>
+  </li>
+  <li>
+    <p>Familiarity:
+In environments with specific code conventions, the familiarity of for loops might outweigh the benefits of streams.</p>
+  </li>
+</ul>
+
+<h3 id="conclusion"><strong>conclusion</strong></h3>
+<p>Java streams and for loops should prioritize code readability unless faced with a proven performance bottleneck. 
+For most scenarios, the negligible differences in performance do not justify sacrificing code clarity. 
+Remember Brian Goetz's advice: "Just write whatever is more readable."</p>
+
+<p><strong>reference</strong><br />
+<a href="https://stackoverflow.com/questions/34632008/key-indicators-that-a-java-8-stream-will-run-slower-than-a-for-loop">https://stackoverflow.com/questions/34632008/key-indicators-that-a-java-8-stream-will-run-slower-than-a-for-loop</a>  <br />
+<a href="https://www.endoflineblog.com/benchmarking-java8-streams">https://www.endoflineblog.com/benchmarking-java8-streams</a>  <br />
+<a href="https://stackoverflow.com/questions/44180101/in-java-what-are-the-advantages-of-streams-over-loops">https://stackoverflow.com/questions/44180101/in-java-what-are-the-advantages-of-streams-over-loops</a><br />
+<a href="https://devm.io/java/java-performance-tutorial-how-fast-are-the-java-8-streams-118830">https://devm.io/java/java-performance-tutorial-how-fast-are-the-java-8-streams-118830</a></p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="1E/673069-2E22-4100-9944-E2AF5A4C4572"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

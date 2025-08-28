@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>고성능 블록체인 아키텍처 - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/solana/architecture/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="고성능 블록체인 아키텍처">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/solana/architecture/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/solana/architecture/" />
+    <meta name="twitter:title" content="고성능 블록체인 아키텍처" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="solana/architecture"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/solana/architecture/"> 고성능 블록체인 아키텍처 </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/solana/architecture.md" target="_blank">created: 2025.02.22</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/solana/architecture.md" target="_blank">updated: 2025.02.22</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/solana/architecture.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=%EA%B3%A0%EC%84%B1%EB%8A%A5+%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8+%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#solana-a-new-architecture-for-a-high-performance-blockchain-v0813" id="markdown-toc-solana-a-new-architecture-for-a-high-performance-blockchain-v0813">Solana: A new architecture for a high performance blockchain v0.8.13</a>    <ul>
+      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+      <li><a href="#intro" id="markdown-toc-intro">Intro</a></li>
+      <li><a href="#network-design" id="markdown-toc-network-design">Network Design</a></li>
+      <li><a href="#discussion" id="markdown-toc-discussion">Discussion</a></li>
+      <li><a href="#further-reading" id="markdown-toc-further-reading">Further Reading</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="solana-a-new-architecture-for-a-high-performance-blockchain-v0813">Solana: A new architecture for a high performance blockchain v0.8.13</h1>
+<blockquote>
+  <p><strong>저자</strong>: Anatoly Yakovenko<br />
+<strong>출처</strong>: https://solana.com/solana-whitepaper.pdf <br />
+<strong>발표 연도</strong>: -</p>
+</blockquote>
+
+<hr />
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+  <li><a href="#intro">Intro</a></li>
+  <li><a href="#network-design">Network Design</a></li>
+  <li><a href="#discussion">Discussion</a></li>
+  <li><a href="#further-reading">Further Reading</a></li>
+</ul>
+
+<hr />
+<h3 id="intro">Intro</h3>
+<p>최근 솔라나의 이해도를 깊게 들어가고자 관련 논문을 찾아보던 중, 창업자 Anatoly가 작성한 백서를 발견했다. 어떤 아키텍처를 도입했기에 오늘날 하드웨어 성능으로 초당 710k의 트랜잭션 처리가 가능한지에 대해 나와있다. 기존 블록체인 노드는 본인 로컬 시간을 기준으로 트랜잭션을 처리하는데 블록체인 특성상 노드들이 다른 위치에 분산되어서 돌아간다 이때 각 노드들의 로컬 시간이 차이가 날 수 있어서 동일한 데이터라도 처리 결과에 영향을 준다는 의미다. 솔라나는 이 문제점들을 PoH를 중심으로 해결하며 성능을 높였다.</p>
+
+<h3 id="network-design">Network Design</h3>
+
+<h3 id="discussion">Discussion</h3>
+<p>Anatoly는 퀄컴과 드롭박스에서 압축 기술과 HCP 특허를 가지고있고 CTO도 같은 퀄컴에서 메세지 전송 인프라일 경험이 솔라나에 그대로 묻어있는게 아닌가 생각된다.</p>
+<ul>
+  <li>어떻게 PoH가 Byzantine Fault Tolerant를 줄여서 오버헤드를 줄이고 1초 안에 끝낼 수 있을까</li>
+</ul>
+
+<h3 id="further-reading">Further Reading</h3>
+<ul>
+  <li>Tendermint: Consensus without Mining
+https://tendermint.com/static/docs/tendermint.pdf</li>
+  <li>Hedera: A Governing Council &amp; Public Hashgraph Network
+https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="152083B3-D02C-4804-8AF1-2F5EE390D630"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

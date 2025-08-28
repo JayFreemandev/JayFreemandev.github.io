@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jay Freeman</title>
+    <description>위키 블로그
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 28 Aug 2025 21:36:12 +0900</pubDate>
+    <lastBuildDate>Thu, 28 Aug 2025 21:36:12 +0900</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+
+
+    
+      <item>
+        <title>English(TOEFL)</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 21:02:54 +0900</pubDate>
+        <link>http://localhost:4000/wiki/languages/english/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/languages/english/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Deutsch</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:57:18 +0900</pubDate>
+        <link>http://localhost:4000/wiki/languages/deutsch/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/languages/deutsch/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Culture fit</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:55:01 +0900</pubDate>
+        <link>http://localhost:4000/wiki/culture_fit/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/culture_fit/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>System Design</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:54:38 +0900</pubDate>
+        <link>http://localhost:4000/wiki/system_design/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/system_design/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>언어</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:39:59 +0900</pubDate>
+        <link>http://localhost:4000/wiki/languages/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/languages/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Algorithms &amp; Data Structures</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:39:11 +0900</pubDate>
+        <link>http://localhost:4000/wiki/algorithms_data_structures/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/algorithms_data_structures/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Projects</title>
+        <description></description>
+        <pubDate>Thu, 28 Aug 2025 20:38:24 +0900</pubDate>
+        <link>http://localhost:4000/wiki/project/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/project/</guid>
+        
+        
+      </item>
+    
+
+    
+
+    
+      <item>
+        <title>2025년 링크 모음</title>
+        <description></description>
+        <pubDate>Sat, 08 Mar 2025 16:40:53 +0900</pubDate>
+        <link>http://localhost:4000/wiki/links/2025/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/links/2025/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2025년 메모</title>
+        <description></description>
+        <pubDate>Sat, 08 Mar 2025 14:39:31 +0900</pubDate>
+        <link>http://localhost:4000/wiki/memo/2025/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/memo/2025/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2025년 기록</title>
+        <description>연말에 회고로 제목을 수정할 문서</description>
+        <pubDate>Sat, 08 Mar 2025 14:37:21 +0900</pubDate>
+        <link>http://localhost:4000/wiki/review/2025/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/review/2025/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>job descriptions</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:23:06 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/job-market-trend/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/job-market-trend/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>k8s</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:16:59 +0900</pubDate>
+        <link>http://localhost:4000/wiki/system_design/kubernetes/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/system_design/kubernetes/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>DevOps</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:15:22 +0900</pubDate>
+        <link>http://localhost:4000/wiki/infra/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/infra/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>시스템 디자인</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:13:18 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/system-design/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/system-design/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>러스트</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:12:52 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/rust/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/rust/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>고성능 블록체인 아키텍처</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:12:07 +0900</pubDate>
+        <link>http://localhost:4000/wiki/solana/architecture/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/solana/architecture/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Solana</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:11:22 +0900</pubDate>
+        <link>http://localhost:4000/wiki/solana/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/solana/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>석유와 외환 시장의 관계</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2025 03:06:15 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/petrocurrency/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/petrocurrency/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>생산성</title>
+        <description></description>
+        <pubDate>Sat, 28 Sep 2024 00:01:20 +0900</pubDate>
+        <link>http://localhost:4000/wiki/lifehack/productivity/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/lifehack/productivity/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>왜 교점을 구하기 위해서 연립 방정식을 사용하는가?</title>
+        <description>함수의 그래프를 이용한 방정식의 실근의 개수</description>
+        <pubDate>Thu, 25 Jul 2024 00:27:17 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/intersections-of-equations/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/intersections-of-equations/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>미적분학</title>
+        <description></description>
+        <pubDate>Mon, 15 Jul 2024 00:07:47 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/calculus/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/calculus/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>3달동안 모니터링한 의문의 mysql  write lock 문제</title>
+        <description>등잔밑이 어두운 디비버 워크벤치</description>
+        <pubDate>Fri, 17 May 2024 21:59:20 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/dbeaver/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/dbeaver/</guid>
+        
+        
+      </item>
+    
+
+    
+
+    
+      <item>
+        <title>외부 흐름을 고려한 투자 수익률을 계산하는 방법</title>
+        <description>시간 가중 수익률</description>
+        <pubDate>Fri, 15 Mar 2024 23:27:32 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/time-weighted-return/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/time-weighted-return/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>단일가격에 의한 개별경쟁매매(단일가매매)</title>
+        <description></description>
+        <pubDate>Mon, 11 Mar 2024 00:26:58 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/single-price-auction-call/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/single-price-auction-call/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>표준편차의 공식이 두가지인 이유</title>
+        <description>표본분산과 차이, n-1로 나누는 이유</description>
+        <pubDate>Sun, 03 Mar 2024 22:48:10 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/standard-deviation/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/standard-deviation/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>변동성은 과거의 값인가 미래를 예측하는 값인가</title>
+        <description></description>
+        <pubDate>Sat, 02 Mar 2024 17:56:06 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/volatility/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/volatility/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>구글의 20% 프로젝트 문화</title>
+        <description>5일 근무 중 4일은 일하고 , 하루는 혁신과 실험을 하는 데 쓰라</description>
+        <pubDate>Fri, 01 Mar 2024 21:58:09 +0900</pubDate>
+        <link>http://localhost:4000/wiki/summary/20-percent-project/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/summary/20-percent-project/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>불분명한 사용자 관점 개발을 버려라</title>
+        <description>페르소나 디자인 방법론</description>
+        <pubDate>Fri, 01 Mar 2024 21:56:18 +0900</pubDate>
+        <link>http://localhost:4000/wiki/summary/persona/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/summary/persona/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Article</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:36:49 +0900</pubDate>
+        <link>http://localhost:4000/wiki/archive/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/archive/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>건강</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:25:35 +0900</pubDate>
+        <link>http://localhost:4000/wiki/lifehack/health/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/lifehack/health/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Lifehack</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:24:54 +0900</pubDate>
+        <link>http://localhost:4000/wiki/lifehack/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/lifehack/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>test</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:19:11 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/system-deisgn/test/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/system-deisgn/test/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>test</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:17:59 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/python/test/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/python/test/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>파이썬</title>
+        <description></description>
+        <pubDate>Thu, 15 Feb 2024 00:07:47 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/python/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/python/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>골드만삭스에서 살아남는 방법</title>
+        <description>부회장 짐 도노반 연설</description>
+        <pubDate>Wed, 14 Feb 2024 23:54:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/summary/how-to-break-goldman-sachs/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/summary/how-to-break-goldman-sachs/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Conference and Article</title>
+        <description></description>
+        <pubDate>Wed, 14 Feb 2024 23:53:32 +0900</pubDate>
+        <link>http://localhost:4000/wiki/summary/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/summary/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>SQL</title>
+        <description></description>
+        <pubDate>Wed, 14 Feb 2024 01:06:57 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/sql/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/sql/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Math</title>
+        <description></description>
+        <pubDate>Wed, 14 Feb 2024 00:37:27 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>최대공약수와 최소공배수</title>
+        <description></description>
+        <pubDate>Wed, 14 Feb 2024 00:17:56 +0900</pubDate>
+        <link>http://localhost:4000/wiki/math/gcd/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/math/gcd/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>받지 못할 연금을 위한</title>
+        <description>국민연금, 퇴직연금, 개인연금</description>
+        <pubDate>Wed, 14 Feb 2024 00:00:42 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/pension/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/pension/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2024년 메모</title>
+        <description>나의 일기</description>
+        <pubDate>Tue, 13 Feb 2024 23:42:37 +0900</pubDate>
+        <link>http://localhost:4000/wiki/memo/2024/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/memo/2024/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Memo</title>
+        <description>임시 기록</description>
+        <pubDate>Tue, 13 Feb 2024 23:39:51 +0900</pubDate>
+        <link>http://localhost:4000/wiki/memo/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/memo/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2024년 링크 모음</title>
+        <description>여기로 옮겨두고 휴대폰 웹 브라우저 탭 좀 줄이자</description>
+        <pubDate>Tue, 13 Feb 2024 23:36:34 +0900</pubDate>
+        <link>http://localhost:4000/wiki/links/2024/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/links/2024/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Links</title>
+        <description>다시 읽고 싶은 링크 모음</description>
+        <pubDate>Tue, 13 Feb 2024 23:33:08 +0900</pubDate>
+        <link>http://localhost:4000/wiki/links/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/links/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2024년 회고</title>
+        <description>솔라나의 해</description>
+        <pubDate>Tue, 13 Feb 2024 23:31:16 +0900</pubDate>
+        <link>http://localhost:4000/wiki/review/2024/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/review/2024/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2023년 회고</title>
+        <description>컨퍼런스를 많이 본 한 해였다</description>
+        <pubDate>Tue, 13 Feb 2024 23:27:41 +0900</pubDate>
+        <link>http://localhost:4000/wiki/review/2023/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/review/2023/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>2022년 회고</title>
+        <description>정신적으로 고생한 해였다</description>
+        <pubDate>Tue, 13 Feb 2024 23:25:44 +0900</pubDate>
+        <link>http://localhost:4000/wiki/review/2022/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/review/2022/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>회고모음</title>
+        <description></description>
+        <pubDate>Tue, 13 Feb 2024 23:22:50 +0900</pubDate>
+        <link>http://localhost:4000/wiki/review/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/review/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Health</title>
+        <description></description>
+        <pubDate>Tue, 13 Feb 2024 23:15:07 +0900</pubDate>
+        <link>http://localhost:4000/wiki/health/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/health/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Best practice of HTTP API architecture</title>
+        <description></description>
+        <pubDate>Tue, 24 Oct 2023 20:44:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2023/2022-10-24-good-practice-http-api-archetecture/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2023/2022-10-24-good-practice-http-api-archetecture/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>How they reduce 80% cost by moving away from aws</title>
+        <description></description>
+        <pubDate>Fri, 10 Mar 2023 20:44:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>How Springboot handle multiple requests(thread pool)</title>
+        <description></description>
+        <pubDate>Sun, 29 Jan 2023 20:44:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2023/2023-01-29-how-springboot-handle-multiple-requests/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2023/2023-01-29-how-springboot-handle-multiple-requests/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Quant&amp;Finance</title>
+        <description></description>
+        <pubDate>Tue, 06 Dec 2022 21:35:00 +0900</pubDate>
+        <link>http://localhost:4000/wiki/quant/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/quant/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Programming</title>
+        <description></description>
+        <pubDate>Tue, 06 Dec 2022 21:35:00 +0900</pubDate>
+        <link>http://localhost:4000/wiki/programming/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/programming/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Finance</title>
+        <description></description>
+        <pubDate>Tue, 06 Dec 2022 21:35:00 +0900</pubDate>
+        <link>http://localhost:4000/wiki/finance/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/finance/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>About virtual memory</title>
+        <description></description>
+        <pubDate>Tue, 01 Nov 2022 20:44:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-11-01-virtural-memory/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-11-01-virtural-memory/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>short memo on spring transaction</title>
+        <description></description>
+        <pubDate>Tue, 11 Oct 2022 22:05:44 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-10-11-short-memo-on-spring-transaction/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-10-11-short-memo-on-spring-transaction/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>layered architecture, fundamental reason of service layor</title>
+        <description></description>
+        <pubDate>Mon, 01 Aug 2022 18:00:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Why steam is slower than for loop(performance benchmark)</title>
+        <description></description>
+        <pubDate>Wed, 29 Jun 2022 19:54:06 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Why you can't use Redis as your main DB</title>
+        <description></description>
+        <pubDate>Thu, 21 Apr 2022 19:52:40 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-04-21-redis-can-not-be-main/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-04-21-redis-can-not-be-main/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>Find the optimal number of connections with DBCP</title>
+        <description></description>
+        <pubDate>Sat, 12 Mar 2022 21:35:00 +0900</pubDate>
+        <link>http://localhost:4000/wiki/2022/2022-03-12-database-connectpool/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/2022/2022-03-12-database-connectpool/</guid>
+        
+        
+      </item>
+    
+
+    
+      <item>
+        <title>ROOT</title>
+        <description></description>
+        <pubDate>Sun, 25 Jul 2021 18:00:13 +0900</pubDate>
+        <link>http://localhost:4000/wiki/index/</link>
+        <guid isPermaLink="true">http://localhost:4000/wiki/index/</guid>
+        
+        
+      </item>
+    
+
+
+  </channel>
+</rss>

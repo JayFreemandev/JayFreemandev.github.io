@@ -7,7 +7,7 @@
             "command": "/bin/bash",
             "args": [
                 "-c",
-                "sh /Users/jay/Desktop/wiki/JayFreemandev.github.io/tool/pre-commit  ${file}"
+                "sh ./tool/pre-commit '${file}'"
             ],
             "group": {
                 "kind": "build",

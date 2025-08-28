@@ -1,0 +1,13 @@
+{
+ "type": "wiki",
+ "title": "언어",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/languages",
+ "updated": "2025-08-28 20:39:59 +0900",
+ "resource": "F54DABB5-01D2-4374-B12C-5A2FD89FE6B9",
+ "children": [
+  "languages/deutsch",
+  "languages/english"
+ ]
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>왜 교점을 구하기 위해서 연립 방정식을 사용하는가? - Jay Freeman</title>
+
+    <meta name="description" content="함수의 그래프를 이용한 방정식의 실근의 개수">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/math/intersections-of-equations/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="왜 교점을 구하기 위해서 연립 방정식을 사용하는가?">
+    <meta property="og:description" content="함수의 그래프를 이용한 방정식의 실근의 개수">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/math/intersections-of-equations/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/math/intersections-of-equations/" />
+    <meta name="twitter:title" content="왜 교점을 구하기 위해서 연립 방정식을 사용하는가?" />
+    <meta name="twitter:description" content="함수의 그래프를 이용한 방정식의 실근의 개수" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="math/intersections-of-equations"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/math/intersections-of-equations/"> 왜 교점을 구하기 위해서 연립 방정식을 사용하는가? </a>
+        </h1>
+    
+        <p class="title-summary">함수의 그래프를 이용한 방정식의 실근의 개수</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/math/intersections-of-equations.md" target="_blank">created: 2024.07.25</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/math/intersections-of-equations.md" target="_blank">updated: 2024.07.25</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/math/intersections-of-equations.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=%EC%99%9C+%EA%B5%90%EC%A0%90%EC%9D%84+%EA%B5%AC%ED%95%98%EA%B8%B0+%EC%9C%84%ED%95%B4%EC%84%9C+%EC%97%B0%EB%A6%BD+%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%84+%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80%3F&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-개요" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li><a href="#2-사례-및-예시" id="markdown-toc-2-사례-및-예시">2. 사례 및 예시</a>    <ul>
+      <li><a href="#21-교점과-연립-방정식의-개념" id="markdown-toc-21-교점과-연립-방정식의-개념">2.1 교점과 연립 방정식의 개념</a></li>
+      <li><a href="#22-사례-두-직선의-교점" id="markdown-toc-22-사례-두-직선의-교점">2.2 사례: 두 직선의 교점</a></li>
+      <li><a href="#23-사례-함수와-직선의-교점" id="markdown-toc-23-사례-함수와-직선의-교점">2.3 사례: 함수와 직선의 교점</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-결론" id="markdown-toc-3-결론">3. 결론</a></li>
+</ul>
+
+<h2 id="1-개요">1. 개요</h2>
+<p>함수의 그래프를 이용한 방정식의 실근의 개수 풀이중 어떤 방정식 x = k가 서로 다른 네 실간을 가지도록 하는 실수 k값의 범위를 구해야한다. 왜 교점과 연립은 개념이 같은가?
+왜 연립의 해는 교점의 좌표인지, 왜 교점을 구하기 위해서는 연립을 사용하는지, 모두 같은 의미이다.</p>
+
+<h2 id="2-사례-및-예시">2. 사례 및 예시</h2>
+<h3 id="21-교점과-연립-방정식의-개념">2.1 교점과 연립 방정식의 개념</h3>
+<p>두 함수의 교점이란, 두 함수가 같은 x값에서 같은 y값을 갖는 점을 의미. 즉, 함수 (f(x))와 (g(x))가 있을 때, 이들의 교점은 (f(x) = g(x))가 성립하는 x값과 y값의 조합인것이다. 이를 구하기 위해서는 연립 방정식을 사용한다. 연립 방정식이란 두 개 이상의 방정식을 동시에 만족시키는 해를 찾는 방법이다.</p>
+
+<h3 id="22-사례-두-직선의-교점">2.2 사례: 두 직선의 교점</h3>
+<p>두 직선 (y = 2x + 1)과 (y = -x + 4)를 생각해 보자. 이 두 직선의 교점을 찾기 위해 연립 방정식을 사용</p>
+
+<p>[
+\begin{cases}
+y = 2x + 1 <br />
+y = -x + 4
+\end{cases}
+]</p>
+
+<p>위의 두 방정식을 연립하면, (2x + 1 = -x + 4)  이 방정식을 풀면,</p>
+
+<p>[
+3x = 3 \implies x = 1
+]</p>
+
+<p>x값을 첫 번째 방정식에 대입하면,</p>
+
+<p>[
+y = 2(1) + 1 = 3
+]</p>
+
+<p>따라서, 두 직선의 교점은 ((1, 3)) 여기서 연립 방정식을 사용하여 교점을 찾기</p>
+
+<h3 id="23-사례-함수와-직선의-교점">2.3 사례: 함수와 직선의 교점</h3>
+<p>또 다른 사례로, 곡선 (y = x^2)와 직선 (y = x + 2)의 교점을 구해보면</p>
+
+<p>[
+\begin{cases}
+y = x^2 <br />
+y = x + 2
+\end{cases}
+]</p>
+
+<p>두 방정식을 연립하면 (x^2 = x + 2). 이를 풀면,</p>
+
+<p>[
+x^2 - x - 2 = 0 \implies (x - 2)(x + 1) = 0
+]</p>
+
+<p>따라서 (x = 2) 또는 (x = -1). 각 x값에 대해 y값을 구하면,</p>
+
+<p>[
+y = 2 + 2 = 4 \quad (\text{for } x = 2)
+]</p>
+
+<p>[
+y = -1 + 2 = 1 \quad (\text{for } x = -1)
+]</p>
+
+<p>따라서, 두 함수의 교점은 ((2, 4))와 ((-1, 1)).</p>
+
+<h2 id="3-결론">3. 결론</h2>
+<p>연립 방정식의 해는 두 함수가 동일한 x값에서 동일한 y값을 갖는 지점을 찾는 과정입니다. 따라서, 연립 방정식의 해가 두 함수의 교점의 좌표가 되는 것이다. 그래서 왜 연립의 해는 교점의 좌표고 왜 교점을 구하기 위해서 연립을 해야하는지 정리</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="B3CE899E-980A-4170-8E91-249B662805E2"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

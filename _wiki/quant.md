@@ -1,6 +1,6 @@
 ---
 layout  : category
-title   : Quant
+title   : Quant&Finance
 summary : 
 date    : 2022-12-06 21:35:00 +0900
 updated : 2022-12-06 21:35:00 +0900

@@ -4,14 +4,30 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-12-17 14:46:01 +0900
+updated : 2025-08-28 20:18:53 +0900
 regenerate: true
 ---
-##### [[/quant]] 
-- [[/quant/petrocurrency]] 
+##### [[/project]] 
+- Relative Strength Screener(KOSPI/KOSDAQ/NASDAQ)
+- Short Momentum Nasdaq Screener
+- Bitcoin Whale Transaction Detect
+- Spitfire Systematic Trading
+- Trading Asset Management Dashboard
 
 ##### [[/solana]]
 - [[/solana/architecture]]
+
+##### [[/algorithms_data_structures]]
+- Arrays & Strings
+- Trees & Graphs
+- Sorting & Searching
+- Dynamic Programming
+- Number Theory
+- [[/programming/sql]]
+
+##### [[/system_design]]
+
+##### [[/culture_fit]]
 
 ##### [[/math]]
 - [[/math/gcd]]
@@ -19,22 +35,22 @@ regenerate: true
 - [[/math/time-weighted-return]]
 - [[/math/intersections-of-equations]]
 
-##### [[/programming]]
-- [[/programming/python]]
-- [[/programming/rust]]
-- [[/programming/sql]]
-- [[/programming/system-design]]
+##### [[/quant]]
+- [[/quant/petrocurrency]] 
+- [[/quant/pension]]
+- [[/quant/volatility]]
+- [[/quant/single-price-auction-call]]
 
-##### [[/infra]]
-- [[/infra/kubernetes]]
-
-##### [[/finance]]
-- [[/finance/pension]]
-- [[/finance/volatility]]
-- [[/finance/single-price-auction-call]]
-
+##### [[/languages]]
+- [[/programming]]
+    - [[/programming/python]]
+    - [[/programming/rust]]
+- Human
+    - [[/languages/english]]
+    - [[/languages/deutsch]]
+    
 ##### [[/summary]]
-- [[/summary/how-to-break-goldman-sache]]
+- [[/summary/how-to-break-goldman-sachs]]
 - [[/summary/persona]]
 - [[/summary/20-percent-project]]
 

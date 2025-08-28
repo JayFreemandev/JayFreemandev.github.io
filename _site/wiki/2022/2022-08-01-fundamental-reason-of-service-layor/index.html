@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>layered architecture, fundamental reason of service layor - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="layered architecture, fundamental reason of service layor">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/" />
+    <meta name="twitter:title" content="layered architecture, fundamental reason of service layor" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2022/fundamental-reason-of-service-layor"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/"> layered architecture, fundamental reason of service layor </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/fundamental-reason-of-service-layor.md" target="_blank">created: 2022.08.01</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/fundamental-reason-of-service-layor.md" target="_blank">updated: 2022.08.01</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2022/fundamental-reason-of-service-layor.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=layered+architecture%2C+fundamental+reason+of+service+layor&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#concept-of-layered-architecture" id="markdown-toc-concept-of-layered-architecture"><strong>Concept of Layered Architecture</strong></a></li>
+  <li><a href="#layered-architecture-in-spring-boot" id="markdown-toc-layered-architecture-in-spring-boot"><strong>Layered Architecture in Spring Boot</strong></a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion"><strong>conclusion</strong></a></li>
+</ul>
+
+<p>I have always followed Layered Architecture while developing servers using Spring Boot. In the process, 
+I faced various dilemmas, such as determining what tasks should be assigned to the Controller, Service, or Repository, 
+how to distribute logic appropriately across layers, and whether responsibilities should be delegated to the domain.</p>
+
+<p>To gain a deeper understanding of Layered Architecture and its applications in Spring Boot, I delved into the concept. 
+In this discussion, I'll explore the concept of Layered Architecture, its common usage in Spring Boot, 
+and share my reflections and solutions to the challenges I encountered.</p>
+
+<h3 id="concept-of-layered-architecture"><strong>Concept of Layered Architecture</strong></h3>
+<p>Layered Architecture is a method of separating a software system into multiple logical layers. 
+The primary reason for layer separation is the separation of concerns. Each layer has specific roles and responsibilities, 
+with higher layers utilizing lower layers to perform functions. This structure reduces system complexity and
+enhances maintainability. Let's delve into the advantages and disadvantages</p>
+
+<p><img src="../../resource/img/img.png" alt="img.png" /></p>
+
+<p><strong>Advantages</strong></p>
+<ul>
+  <li>Abstraction for Readable Code: 
+Abstraction allows for writing readable code. Naming methods intuitively in lower layers enables understanding of the 
+overall flow without delving into lower-level methods.</li>
+  <li>Decoupling for Low Coupling: 
+Separating layers reduces coupling, minimizing the impact of changes in one layer on others. Each layer can be developed, 
+tested, and modified independently.</li>
+  <li>High Reusability 
+Methods defined in a lower layer, especially in the domain layer, can be reused across different services, 
+enhancing code reusability.</li>
+</ul>
+
+<p><strong>Disadvantages</strong></p>
+<ul>
+  <li>Trade-off between Modularity and Performance
+To lower coupling, additional processing steps such as casting or DTO conversion may be required when exchanging data 
+between layers, potentially introducing overhead, especially for large and complex datasets.</li>
+  <li>Limited Flexibility Changes in the lower layer may still necessitate modifications in the upper layers, 
+limiting flexibility. Using an open-closed principle (closed for modification but open for extension) can help manage
+this limitation.</li>
+</ul>
+
+<h3 id="layered-architecture-in-spring-boot"><strong>Layered Architecture in Spring Boot</strong></h3>
+<p>In Spring Boot, a commonly adopted pattern is the 3-layered architecture: Controller Layer, Service Layer, 
+and Repository Layer.
+<img src="../../resource/img/spring_boot/img.png" alt="img.png" /></p>
+
+<ol>
+  <li>Controller Layer: Handles user requests, invokes Service Layer for business logic processing, and prepares response 
+DTOs for frontend.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span>
+<span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">ApiResponse</span><span class="o">&lt;</span><span class="nc">RecipeResponse</span><span class="o">&gt;&gt;</span> <span class="nf">createRecipe</span><span class="o">(</span><span class="nd">@CurrentUser</span> <span class="nc">User</span> <span class="n">user</span><span class="o">,</span> <span class="nd">@RequestBody</span> <span class="nc">RecipeCreateRequest</span> <span class="n">recipeCreateRequest</span><span class="o">){</span>
+
+ <span class="n">recipeService</span><span class="o">.</span><span class="na">deleteCancelledFiles</span><span class="o">(</span><span class="n">recipeCreateRequest</span><span class="o">);</span>
+ <span class="nc">RecipeResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">recipeService</span><span class="o">.</span><span class="na">createRecipe</span><span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">recipeCreateRequest</span><span class="o">);</span>
+
+ <span class="nc">ApiResponse</span> <span class="n">apiResponse</span> <span class="o">=</span> <span class="nc">ApiResponse</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+         <span class="o">.</span><span class="na">message</span><span class="o">(</span><span class="s">"Create Success"</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">status</span><span class="o">(</span><span class="nc">HttpStatus</span><span class="o">.</span><span class="na">CREATED</span><span class="o">.</span><span class="na">value</span><span class="o">())</span>
+         <span class="o">.</span><span class="na">data</span><span class="o">(</span><span class="n">response</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+
+ <span class="k">return</span> <span class="nc">ResponseEntity</span><span class="o">.</span><span class="na">ok</span><span class="o">()</span>
+         <span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="n">apiResponse</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Service Layer: Processes business logic, interacts with the Repository Layer for database operations, 
+and may invoke other services for complex logic. It encapsulates domain objects and logic.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Transactional</span>
+<span class="kd">public</span> <span class="nc">RecipeResponse</span> <span class="nf">createRecipe</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">,</span> <span class="nc">RecipeCreateRequest</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+ <span class="nc">Util</span><span class="o">.</span><span class="na">validateDuplication</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getIngredients</span><span class="o">(),</span> <span class="n">request</span><span class="o">.</span><span class="na">getOptionalIngredients</span><span class="o">());</span>
+
+ <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Ingredient</span><span class="o">&gt;</span> <span class="n">requiredIngredients</span> <span class="o">=</span> <span class="n">ingredientSimpleService</span><span class="o">.</span><span class="na">getIngredientsByIds</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getIngredients</span><span class="o">());</span>
+ <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Ingredient</span><span class="o">&gt;</span> <span class="n">optionalIngredients</span> <span class="o">=</span> <span class="n">ingredientSimpleService</span><span class="o">.</span><span class="na">getIngredientsByIds</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getOptionalIngredients</span><span class="o">());</span>
+
+ <span class="nc">Recipe</span> <span class="n">recipe</span> <span class="o">=</span> <span class="n">recipeRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">createRecipeEntity</span><span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">request</span><span class="o">));</span>
+
+ <span class="n">saveNecessaryIngredientsOfRecipe</span><span class="o">(</span><span class="n">recipe</span><span class="o">,</span> <span class="n">requiredIngredients</span><span class="o">);</span>
+ <span class="n">saveOptionalIngredientsOfRecipe</span><span class="o">(</span><span class="n">recipe</span><span class="o">,</span> <span class="n">optionalIngredients</span><span class="o">);</span>
+
+ <span class="n">stepService</span><span class="o">.</span><span class="na">saveStepsForRecipe</span><span class="o">(</span><span class="n">recipe</span><span class="o">,</span> <span class="n">request</span><span class="o">.</span><span class="na">getSteps</span><span class="o">());</span>
+
+ <span class="k">return</span> <span class="nc">RecipeResponse</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+         <span class="o">.</span><span class="na">recipeId</span><span class="o">(</span><span class="n">recipe</span><span class="o">.</span><span class="na">getId</span><span class="o">())</span>
+         <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Repository Layer: Responsible for data access and interaction with databases or external systems. 
+Implements CRUD operations and provides infrastructure-specific implementations.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RecipeRepository</span> <span class="kd">extends</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="nc">Recipe</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+
+ <span class="nd">@EntityGraph</span><span class="o">(</span>
+         <span class="n">attributePaths</span> <span class="o">=</span> <span class="o">{</span><span class="s">"author"</span><span class="o">,</span> <span class="s">"steps"</span><span class="o">},</span> <span class="n">type</span> <span class="o">=</span> <span class="nc">EntityGraphType</span><span class="o">.</span><span class="na">FETCH</span>
+ <span class="o">)</span>
+ <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Recipe</span><span class="o">&gt;</span> <span class="nf">findAllElementsById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">);</span>
+
+ <span class="kt">boolean</span> <span class="nf">existsById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">recipeId</span><span class="o">);</span>
+
+ <span class="nd">@Query</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"select distinct r from Recipe r join fetch r.author "</span><span class="o">,</span>
+         <span class="n">countQuery</span> <span class="o">=</span> <span class="s">"select count(r) from Recipe r"</span><span class="o">)</span>
+ <span class="nc">Page</span><span class="o">&lt;</span><span class="nc">Recipe</span><span class="o">&gt;</span> <span class="nf">findRecipes</span><span class="o">(</span><span class="nc">Pageable</span> <span class="n">pageable</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+    <p><strong>Challenges Faced and Solutions</strong></p>
+  </li>
+  <li>
+    <p>Validation Responsibility: Determining where to perform validation can be challenging. 
+Basic validations can be done in the Controller using bean validation, while more complex validations, 
+including those related to business logic, are handled in the Service Layer.</p>
+  </li>
+  <li>
+    <p>Delineating Responsibilities: Striking a balance between hiding and revealing information is crucial. 
+Over-wrapping methods in the Controller may reduce service method reusability. Optimal exposure of methods in the
+Service Layer ensures meaningful abstraction without unnecessary wrapping.</p>
+  </li>
+  <li>Enhancing Service Method Reusability: To increase the reusability of simple service methods, 
+a separate layer named [Domain]SimpleService can be introduced. This layer holds commonly reused methods across 
+different domains, promoting cleaner organization.
+<img src="../../resource/img/simple_service/img.png" alt="img.png" /></li>
+  <li>These coding principles emphasize separating the flow and methods in service methods and maintaining consistent 
+abstraction levels across methods.</li>
+</ol>
+
+<h2 id="conclusion"><strong>conclusion</strong></h2>
+<p>Layered Architecture in Spring Boot offers a structured approach to system design, but careful consideration of 
+responsibilities and code organization is essential for optimal development and maintainability.</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="38/90F574-7578-4942-B299-A6D54199006F"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

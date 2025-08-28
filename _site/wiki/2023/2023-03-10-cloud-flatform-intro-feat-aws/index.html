@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>How they reduce 80% cost by moving away from aws - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How they reduce 80% cost by moving away from aws">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/" />
+    <meta name="twitter:title" content="How they reduce 80% cost by moving away from aws" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2023/cloud-flatform-intro-feat-aws"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/"> How they reduce 80% cost by moving away from aws </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2023/cloud-flatform-intro-feat-aws.md" target="_blank">created: 2023.03.10</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2023/cloud-flatform-intro-feat-aws.md" target="_blank">updated: 2023.03.10</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2023/cloud-flatform-intro-feat-aws.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=How+they+reduce+80%25+cost+by+moving+away+from+aws&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul>
+  <li>TOC</li>
+</ul>
+
+<h3 id="cloud"><strong>Cloud</strong></h3>
+<ol>
+  <li>If you buy PC or hardware or run a data center <strong>Initial investment</strong> It is expensive and difficult to operate unless you are an organization that can do infrastructure engineering. Cloud platforms can <strong>use ready computing resources</strong> to meet <strong>the level of resources you want</strong>, <strong>only as much as you want</strong></li>
+  <li>Infrastructure provided in cloud form generally has a <strong>'pay as you go'</strong> concept. <strong>Pay only as much as you use it</strong>. If the hardware scale is too large or you no longer need a machine, you can just <strong>click a few times</strong> to change it to a smaller instance type with a smaller hardware size, or eliminate it.</li>
+  <li>There is already a lot <strong>ready for infrastructure management. This is why even quite large organizations use cloud platforms, **because the number of server system engineers is at the level of operating expensive server rooms</strong>.</li>
+</ol>
+
+<p>You can set up Linux servers in minutes, multiplex servers, distribute traffic, transmit log metrics, Domain, automatically back up storage, Modify inbound/outbound access controls, and <strong>increase and reduce servers based on traffic status</strong> once in a few clicks.</p>
+<ol>
+  <li>'Service-Level Agreements (SLAs)' <strong>Guarantees infrastructure uptime</strong>
+Receive. <strong>Payback or credit</strong> if you are not guaranteed the service level specified in the SLA
+You can <strong>reward with money</strong> through your back.</li>
+  <li>Using the <strong>cloud is a great deal to gain from rapid deployment of infrastructure, easy automation, flexible capacity (scalability), reliability, cost benefits of economies of scale, easy deployment of applications around the world, and high levels of security and quality standards</strong></li>
+</ol>
+
+<p><strong>Why most people use AWS</strong></p>
+
+<ul>
+  <li>The organization is most familiar with AWS.</li>
+  <li>AWS occupies more than 50% of the cloud platform market and is trusted by many large clients.</li>
+  <li><strong>All kinds of operations are APIized</strong> and <strong>High-level libraries (AWS SDKs) that can access these APIs are well developed by language, so **The barriers to access resources</strong> and <strong>infrastructure control</strong> at the code level are low.</li>
+  <li>Once a new member is signed up for AWS, it is a bonus to provide <strong>free tier</strong> that allows you to <strong>use key services for free within a certain limit</strong> for 12 months. Google Cloud Platform and Azure are similar, but AWS offers the most generous free plan.</li>
+</ul>
+
+<h3 id="selection-of-engines">selection of engines</h3>
+
+<ul>
+  <li>EC2(Elastic Compute Cloud)</li>
+  <li>Beanstalk</li>
+  <li>ECS(Elastic Container Service)</li>
+  <li>ECS+Fargate
+-Lightsail</li>
+  <li>Lambda</li>
+</ul>
+
+<p>Since the text becomes redundant to list the pros and cons and each feature, let's post the concepts later, knowing that there are these kinds of engine choices when choosing AWS</p>
+
+<h3 id="how-did-prerenderio-reduce-server-costs-by-800k">How did Prerender.io reduce server costs by 800K?</h3>
+
+<p>Checkout https://levelup.gitconnected.com/how-we-reduced-our-annual-server-costs-by-80-from-1m-to-200k-by-moving-away-from-aws-2b98cbd21b46 for detail contents</p>
+
+<p>Reduce AWS dependency and manage cache data and traffic management as an in-house infrastructure. A service called Prerender itself provides a service that caches and renders JavaScript pages, allowing search engines to crawl and index pure HTML files.</p>
+
+<p>Prerender used servers and services hosted by Amazon Web Services (AWS) to store pages that cache and render for clients.</p>
+
+<p>Because all of this data processing was done on the server, 70,000 pages per minute on AWS resulted in astronomical server maintenance costs.</p>
+
+<h3 id="building-internal-infrastructure">Building Internal Infrastructure</h3>
+
+<p><strong>bare metal server</strong><br />
+It migrated cached pages and traffic to its own internal servers and reduced reliance on AWS. It is expected to reduce hosting costs by 40%.
+<img src="https://user-images.githubusercontent.com/72185011/208582361-d146f9d3-d90a-43f0-aba7-e28d3fe9e39f.png" alt="Untitled" /></p>
+
+<p>Bare metal servers are services that provide physical servers independently without virtualization. Performance-sensitive services can always operate reliably because they use a single server that is not affected by other cloud users. It is effective when large input/output occurs or requires fast response speed</p>
+
+<p>Most server settings were performed on bare metal servers, and tests were conducted by migrating them little by little to small and controllable units before expansion. Most traffic workloads were successfully migrated from AWS.</p>
+
+<p><strong>new monitoring dashboard</strong></p>
+
+<p>It has developed a new dashboard that can identify errors or performance issues.</p>
+
+<p><strong>minio</strong>
+<img src="https://user-images.githubusercontent.com/72185011/208582475-0547c044-f84e-4142-8a3b-efdaaf93e7e1.png" alt="Untitled 1" />
+After pouring traffic, the task of transferring cached data moved the data from S3 to minio and its own Cassandra clustering. However, according to the new CTO Zsolt Varga, there has been a large expenditure on transferring data.</p>
+
+<p>"The true hidden price of AWS comes from the cost of traffic. They can sell reasonably priced storage and even upload it for free. But if you take it out, you'll have to pay a huge price**.</p>
+
+<p><strong>Critical comments</strong></p>
+
+<p>Do you really need a ridiculously complicated permission system? Do you really need 50,000 different types of instances available for possible future use? Do you really need to micro-manage complex setups involving ingress traffic, IPs, load balancers, firewalls, etc…?
+Or do you just need a simple, straight-forward service at 1/10th the cost?</p>
+
+<p>I run over 250 sites and customer-facing applications on Digital Ocean with 99.99% availability. My team doesn't need micro-managed permissions to various aspects of the service–just use the permissions available in Kubernetes</p>
+
+<p>I've been screaming at developers for years about their dumb choices to use AWS, Google, or Azure. Maybe now some people will sit up and take notice.</p>
+
+<p>-Aron-</p>
+
+<p>And now you need an extra team of 5 DevOps engineers that will cost you 600-800K per year + 200K (hosting) + MORE HUMAN error</p>
+
+<p>-<a href="https://medium.com/@ponchovaldescarrales?source=responses-----2b98cbd21b46----2----------------------------">Alfonso Valdes Carrales</a>-</p>
+
+<p>You can say that your AWS bill went down by 800k but to say you SAVED 800k is disingenuous. You could have reduced your AWS bill by $1M by migrating to Azure and it would have been a spicier headline…</p>
+
+<p>-<a href="https://medium.com/@natebourgoin?source=responses-----2b98cbd21b46----3----------------------------">natebourgoin</a>-</p>
+
+<p>I once saved our company around $20,000/mo in a few hours after I noticed someone way overprovisioned a service that was running for a few years. It was my first new person power move.</p>
+
+<p>-<strong><a href="https://www.reddit.com/user/MashPotatoQuant/">MashPotatoQuant</a>-</strong></p>
+
+<p><strong>The biggest money saver is, indeed, to know what you're doing.</strong></p>
+
+<p>The catch is, if you know what you're doing, you are often better off with your own servers.</p>
+
+<p>The extra labor cost is there, but if you do the math it's usually less than you think. When we looked at the price for running some stuff on EC2 instances instead of on-prem, we concluded that we might just as well hire a few persons to sit and stare at our on-prem servers all day long.</p>
+
+<p>Also easily forgotten, there are corresponding labor costs for cloud too (you can't just let developers run wild and create instances high and low - you need ongoing efforts for structure, optimization, monitoring, guidelines, technology evaluation, etc etc).</p>
+
+<p>-<strong><a href="https://www.reddit.com/user/mbitsnbites/">mbitsnbites</a>-</strong></p>
+
+<p><strong>reference</strong><br />
+https://levelup.gitconnected.com/how-we-reduced-our-annual-server-costs-by-80-from-1m-to-200k-by-moving-away-from-aws-2b98cbd21b46<br />
+https://www.reddit.com/r/programming/comments/xqipik/how_we_reduced_our_annual_server_costs_by_80_from/</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="A7/953B01-621E-4081-B40C-2BCDA2ECBBC3"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

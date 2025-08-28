@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>Best practice of HTTP API architecture - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2023/2022-10-24-good-practice-http-api-archetecture/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Best practice of HTTP API architecture">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2023/2022-10-24-good-practice-http-api-archetecture/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2023/2022-10-24-good-practice-http-api-archetecture/" />
+    <meta name="twitter:title" content="Best practice of HTTP API architecture" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2023/good-practice-http-api-archetecture"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2023/2022-10-24-good-practice-http-api-archetecture/"> Best practice of HTTP API architecture </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2023/good-practice-http-api-archetecture.md" target="_blank">created: 2023.10.24</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2023/good-practice-http-api-archetecture.md" target="_blank">updated: 2023.10.24</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2023/good-practice-http-api-archetecture.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=Best+practice+of+HTTP+API+architecture&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul>
+  <li>TOC
+    <p>Carpenters At Work Building Two Houses is a photograph by Everett which was uploaded on December 5th, 2011.</p>
+  </li>
+</ul>
+
+<p>I referred to the Heroku HTTP API Design Guide.</p>
+
+<h3 id="http-design">HTTP Design</h3>
+
+<p><strong>Background and Requirements</strong></p>
+
+<ul>
+  <li><strong>Architecture familiar to the client side</strong>, or <strong>Learning curve should be manageable</strong>.</li>
+  <li>There should be no room for delays in the development schedule.</li>
+</ul>
+
+<p><strong>Selections</strong></p>
+
+<ul>
+  <li>HTTP API</li>
+  <li>REST API</li>
+  <li>GraphQL</li>
+</ul>
+
+<p>GraphQL must consider the running curve and it is really difficult to satisfy REST's 'self-descriptive' and 'HATEOAS' principles to keep the complete REST API.</p>
+
+<h3 id="serialization-format">Serialization Format</h3>
+
+<ul>
+  <li>XML</li>
+  <li>JSON</li>
+  <li>YAML</li>
+</ul>
+
+<p>Let's use JSON</p>
+
+<p>Although representing the same data, JSON is <strong>better lighter</strong> and <strong>readable</strong> is also good.</p>
+
+<p>The tree structure of 'XML' was judged to be <strong>not an effective format for expressing resources</strong>.(Difficult to express Array)</p>
+
+<p>'YAML' is not commonly used as a serialization format.** The speed of de-serialization is slow, and there is no particular advantage of using YAML.</p>
+
+<p>'JSON' stands for <strong>JavaScript Object Notation</strong>. There is no structure <strong>as comfortable as JSON for front-end users who will be logic-processing with JavaScript or their brothers (such as TypeScript), and most front-end engineers, including mobile apps and the web, are already familiar with JSON.</strong></p>
+
+<h3 id="simple-description-of-json-by-koray-tugay">Simple description of JSON by <a href="https://stackoverflow.com/questions/383692/what-is-json-and-what-is-it-used-for/383699#383699">Koray Tugay</a></h3>
+<p><strong>What is JSON? – How I explained it to my wife</strong></p>
+
+<p><strong>Me:</strong> “It’s basically a way of communicating with someone in writing….but with very specific rules.</p>
+
+<p><strong>Wife:</strong> yeah….?</p>
+
+<p><strong>Me:</strong> In prosaic English, the rules are pretty loose: just like with cage fighting. Not so with JSON. There are many ways of describing something:</p>
+
+<ul>
+  <li>Example 1: Our family has 4 people: You, me and 2 kids.</li>
+  <li>Example 2: Our family: you, me, kid1 and kid2.</li>
+  <li>Example 3: Family: [ you, me, kid1, kid2]</li>
+  <li>Example 4: we got 4 people in our family: mum, dad, kid1 and kid2.</li>
+</ul>
+
+<p><strong>Wife:</strong> Why don’t they just use plain English instead?</p>
+
+<p><strong>Me:</strong> They would, but remember we’re dealing with computers. A computer is stupid and is not going to be able to understand sentences. So we gotta be really specific when computers are involved otherwise they get confused. Furthermore, JSON is a fairly efficient way of communicating, so most of the irrelevant stuff is cut out, which is pretty hand. If you wanted to communicate our family, to a computer, one way you could do so is like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "Family": ["Me", "Wife", "Kid1", "Kid2"]
+}
+
+</code></pre></div></div>
+
+<p>……and that is basically JSON. But remember, you MUST obey the JSON grammar rules. If you break those rules, then a computer simply will not understand (i.e. parse) what you are writing.</p>
+
+<p><strong>Wife:</strong> So how do I write in Json?</p>
+
+<p>A good way would be to use a json serialiser - which is a library which does the heavy lifting for you.</p>
+
+<p><strong>Summary</strong></p>
+
+<blockquote>
+  <p>JSON is basically a way of communicating data to someone, with very, very specific rules. Using Key Value Pairs and Arrays. This is the concept explained, at this point it is worth reading the specific rules above.</p>
+
+</blockquote>
+
+<h3 id="check-list">Check List</h3>
+<ul>
+  <li><a href="https://github.com/yoondo/http-api-design#return-appropriate-status-codes">Return appropriate status codes</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-full-resources-where-available">Provide full resources where available</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#accept-serialized-json-in-request-bodies">Accept serialized JSON in request bodies</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-resource-uuids">Provide resource (UU)IDs</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-standard-timestamps">Provide standard timestamps</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#use-utc-times-formatted-in-iso8601">Use UTC times formatted in ISO8601</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#use-consistent-path-formats">Use consistent path formats</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#downcase-paths-and-attributes">Downcase paths and attributes</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#nest-foreign-key-relations">Nest foreign key relations</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#support-non-id-dereferencing-for-convenience">Support non-id dereferencing for convenience</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#generate-structured-errors">Generate structured errors</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#support-caching-with-etags">Support caching with Etags</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#trace-requests-with-request-ids">Trace requests with Request-Ids</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#paginate-with-ranges">Paginate with ranges</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#show-rate-limit-status">Show rate limit status</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#version-with-accepts-header">Version with Accepts header</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-machine-readable-json-schema">Provide machine-readable JSON schema</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-human-readable-docs">Provide human-readable docs</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#provide-executable-examples">Provide executable examples</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#describe-stability">Describe stability</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#require-tls">Require TLS</a></li>
+  <li><a href="https://github.com/yoondo/http-api-design#pretty-print-json-by-default">Pretty-print JSON by default</a></li>
+</ul>
+
+<p><strong>reference</strong><br />
+https://stackoverflow.com/questions/383692/what-is-json-and-what-is-it-used-for/383699#383699</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="A7/953B01-621E-4081-B40C-2BCDA2ECBBC3"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

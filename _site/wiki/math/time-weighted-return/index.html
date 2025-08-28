@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>외부 흐름을 고려한 투자 수익률을 계산하는 방법 - Jay Freeman</title>
+
+    <meta name="description" content="시간 가중 수익률">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/math/time-weighted-return/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="외부 흐름을 고려한 투자 수익률을 계산하는 방법">
+    <meta property="og:description" content="시간 가중 수익률">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/math/time-weighted-return/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/math/time-weighted-return/" />
+    <meta name="twitter:title" content="외부 흐름을 고려한 투자 수익률을 계산하는 방법" />
+    <meta name="twitter:description" content="시간 가중 수익률" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="math/time-weighted-return"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/math/time-weighted-return/"> 외부 흐름을 고려한 투자 수익률을 계산하는 방법 </a>
+        </h1>
+    
+        <p class="title-summary">시간 가중 수익률</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/math/time-weighted-return.md" target="_blank">created: 2024.03.15</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/math/time-weighted-return.md" target="_blank">updated: 2024.03.15</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/math/time-weighted-return.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=%EC%99%B8%EB%B6%80+%ED%9D%90%EB%A6%84%EC%9D%84+%EA%B3%A0%EB%A0%A4%ED%95%9C+%ED%88%AC%EC%9E%90+%EC%88%98%EC%9D%B5%EB%A5%A0%EC%9D%84+%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94+%EB%B0%A9%EB%B2%95&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#도입-이유" id="markdown-toc-도입-이유">도입 이유</a></li>
+  <li><a href="#시간-가중-수익률" id="markdown-toc-시간-가중-수익률">시간 가중 수익률</a></li>
+  <li><a href="#문제점" id="markdown-toc-문제점"><strong>문제점</strong></a>    <ul>
+      <li><a href="#단순-월별-성과를-수익률로-표현할때-생기는-뻥튀기" id="markdown-toc-단순-월별-성과를-수익률로-표현할때-생기는-뻥튀기">단순 월별 성과를 수익률로 표현할때 생기는 뻥튀기</a></li>
+    </ul>
+  </li>
+  <li><a href="#결론" id="markdown-toc-결론">결론</a></li>
+</ul>
+
+<h2 id="도입-이유">도입 이유</h2>
+<p>전 월 대비 투자자의 수익률을 보고서로 만드는중 누적 수익률에 관한 계산이 필요했고 투자자의 기초 자산은 추가 투입되거나 감소 가능한 변수인데 이를 고려해서 펀드를 운용하는 매니저 입장에서 수익률을 어떻게 도출 할 것인가? 이 문제를 해결하고자 시간 가중 수익률을 적용했고 이해한 내용을 정리합니다.</p>
+
+<h2 id="시간-가중-수익률">시간 가중 수익률</h2>
+<p>시간 가중 수익률(TWR)은 투자 수익률을 계산하는 방법으로, 하위 기간에 대한 수익률을 <em>독립적</em>으로 합산 하고 각 하위 기간의 기간에 따라 가중치를 적용합니다. 
+시간가중법은 외부 흐름을 보상하는 방식에서 투자 수익을 계산하는 다른 방법과 다릅니다.</p>
+
+<p><strong>시간 가중치 수익률 계산의 목적은 투자 결정의 성과를 평가하는 것</strong>이며, 
+투자자의 자본 조정 행위(입출금)가 수익률 측정에 영향을 미치지 않도록 하는 것</p>
+
+\[TWRR=(i=1∏n (1+ri))−1\]
+
+<p>기간별 수익 계산 : (1+profit) * (1 + n profit) - 1</p>
+
+<p>(1 + 해당 기간 수익률) 들의 곱과 마지막에 원금 1을(100%) 뺀다.</p>
+
+<h2 id="문제점"><strong>문제점</strong></h2>
+
+<h3 id="단순-월별-성과를-수익률로-표현할때-생기는-뻥튀기">단순 월별 성과를 수익률로 표현할때 생기는 뻥튀기</h3>
+
+<p>A 사용자의 기초자산은 100원으로 시작.</p>
+
+<p>1월에 투자를 시작해서 1월말 마감자산은 200원으로 100% 상승했다. 이때 800원을 추가 입금해서 2월 투자는 1000으로 시작해서 2월 29일 마지막날 자산은 800원이다. 현재 자산 기준으로 비교를 하면 1000원에서 시작하여 800원으로 끝났기 때문에 -200원(20%)를 손해를 본다.</p>
+
+<p>하지만 리포트는 이전달 마감자산(200원)과 이번달의 마감자산(800원)을 비교한다. 따라서 손실이 아닌 수익으로 보이게된다. 중간에 추가되거나 감소한 기초 자산을 고려하지 않고 단순히 월별 자산의 증감을 비교하기 때문이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">월</span> <span class="n">수익금</span> <span class="p">:</span> <span class="n">현재</span> <span class="n">마감자산</span> <span class="o">-</span> <span class="n">이전달</span> <span class="n">마감자산</span>
+<span class="n">월</span> <span class="n">수익률</span> <span class="p">:</span> <span class="n">월</span> <span class="n">수익금</span> <span class="o">/</span> <span class="n">이전달</span> <span class="n">마감자산</span>
+</code></pre></div></div>
+
+<p>2월달 리포트 기준으로 전달 마감자산과 이번달 마감자산은 200원과 800원이라 비교 시 월 수익금은 600원, 수익률은 1월의 마감자산과 비교했을때 3배차이 300%다. 누적 수익금은 리포트의 월 수익금을 모두 더 한 값으로 1월 100원 2월 600원, 700원이다.</p>
+
+<p>시간 가중 누적 수익률은 (1+100%) * (1 + 300%) - 1 = 700%이 계산된다.</p>
+
+<hr />
+
+<p>다시 원론적으로 시간 가중 수익률을 선택한 이유는 투자자의 기초자산 조정 행위가 수익률 측정에 영향을 미치지 않도록 하는 것이다. 리포트를 계산하는 시점에 기초자산을 조회하여 전달 마감자산에 반영한 계산이 필요해서 기초 자산 컬럼 추가가 필요했다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">last_month_asset</span> <span class="o">=</span> <span class="n">last_month_asset</span> <span class="o">+</span> <span class="p">(</span><span class="n">계산</span> <span class="n">시점</span> <span class="n">기초자산</span> <span class="o">-</span> <span class="n">전달</span> <span class="n">기초자산</span><span class="p">)</span>
+<span class="mi">200</span> <span class="o">+</span> <span class="p">(</span><span class="mi">100</span><span class="o">+</span><span class="mi">800</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">monthly_profit</span> <span class="o">=</span> <span class="n">this_month_asset</span> <span class="o">-</span> <span class="n">last_month_asset</span>
+<span class="mi">800</span> <span class="o">-</span> <span class="mi">1000</span> <span class="o">=</span> <span class="o">-</span><span class="mi">200</span>
+
+<span class="n">monthly_profit_rate</span> <span class="o">=</span> <span class="n">monthly_profit</span> <span class="o">/</span> <span class="n">last_month_asset</span>
+<span class="o">-</span> <span class="mi">200</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.2</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>투자자 입장</strong></p>
+
+<ol>
+  <li>1월달에 기초자산 100원시작 200원(100%)</li>
+  <li>2월달에 800원 추가 입금해서 1000원 시작 → 800원(-20%)</li>
+  <li>누적 수익률은 2월 마감자산(800원) / 1월달 기초자산 + 추가로 넣은 내 돈(900원)</li>
+  <li>800 / 900 = 0.89</li>
+  <li>(800 / 900) - 1 = -0.11</li>
+  <li>내 총 자산 900원 대비 -11% 손실</li>
+</ol>
+
+<p>따라서 투자자 관점에서는 시간 가중 수익률이 아니라 금액가중수익률로 계산해야한다.</p>
+
+<hr />
+
+<p><strong>펀드 매니저 입장</strong></p>
+
+<ol>
+  <li>1월달의 수익률 100%</li>
+  <li>2월달의 수익률 -20%</li>
+  <li>시간 가중 누적 수익률은 (1 + 100% ) * ( 1 - 20%) - 1 = 60%</li>
+</ol>
+
+<p>펀드 매니저 입장에서 시간 가중 수익률을 사용하는 것이 합리적인 이유는 투자 성과를 측정할 때 투자자의 자본 입출금이 투자 성과에 미치는 영향을 제거하고 오직 순수한 투자 성과만을 반영(고객이 고점에 투자금 추가 하거나 저점에 투자금 회수 하는거까지 투자 성과에 고려 불가)</p>
+
+<h2 id="결론">결론</h2>
+<p>시간 가중 수익률은 투자 포트폴리오의 성과를 측정하는 방법으로, 포트폴리오에 대한 외부 흐름(예: 현금 유입 및 유출)을 고려하여 계산됩니다. 이 방법은 포트폴리오에 돈이 들어오거나 나갈 때마다 시간을 여러 하위 기간으로 나누고, 각 하위 기간의 독립적인 수익률을 연결하여 전체 기간의 성과를 측정합니다.</p>
+
+<p>각 하위 기간 동안의 성과가 다음 기간의 투자 규모에 영향을 미치지 않도록 하여, 투자자의 실제 투자 성과와는 관계없이 포트폴리오 관리자의 성과를 평가하는 데 유용합니다.</p>
+
+<p>간단히 말해, 시간 가중 수익률은 투자 포트폴리오의 성과를 외부 자금 흐름의 영향으로부터 분리하여 평가하는 방법입니다. 이를 통해 투자자가 언제 자금을 투입하거나 인출하든지 관계없이 포트폴리오 관리의 효율성을 객관적으로 비교할 수 있습니다.</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="47A101B9-9F49-4128-969E-26961FED6941"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

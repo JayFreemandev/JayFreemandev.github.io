@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>변동성은 과거의 값인가 미래를 예측하는 값인가 - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/quant/volatility/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="변동성은 과거의 값인가 미래를 예측하는 값인가">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/quant/volatility/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/quant/volatility/" />
+    <meta name="twitter:title" content="변동성은 과거의 값인가 미래를 예측하는 값인가" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="quant/volatility"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/quant/volatility/"> 변동성은 과거의 값인가 미래를 예측하는 값인가 </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/quant/volatility.md" target="_blank">created: 2024.03.02</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/quant/volatility.md" target="_blank">updated: 2024.03.02</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/quant/volatility.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=%EB%B3%80%EB%8F%99%EC%84%B1%EC%9D%80+%EA%B3%BC%EA%B1%B0%EC%9D%98+%EA%B0%92%EC%9D%B8%EA%B0%80+%EB%AF%B8%EB%9E%98%EB%A5%BC+%EC%98%88%EC%B8%A1%ED%95%98%EB%8A%94+%EA%B0%92%EC%9D%B8%EA%B0%80&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#표준-편차" id="markdown-toc-표준-편차">표준 편차</a></li>
+  <li><a href="#변동성의-종류" id="markdown-toc-변동성의-종류">변동성의 종류</a></li>
+  <li><a href="#변동성은-과거의-값인가-미래를-예측하는-값인가" id="markdown-toc-변동성은-과거의-값인가-미래를-예측하는-값인가">변동성은 과거의 값인가? 미래를 예측하는 값인가?</a></li>
+</ul>
+
+<p>변동성이라는 리스크의 일반적인 개념으로써 말은 변화하는 정도를 표시하는 말이라고 생각할 수 있지만. 금융공학에서는 좀더 엄밀하게 로그 수익률의 표준편차라고 정의한다. 이런 움직임을 제곱한것이 표준편차이다. “표준편차”(standard deviation)라는 말은 통계학에서 사용하는 용어이다. 변동성을 이해하기 위해, 먼저 "표준편차"라는 말부터 알아야 합니다.</p>
+
+<h3 id="표준-편차">표준 편차</h3>
+<p>표준편차는 사물이나 숫자들이 얼마나 평균값(가장 보통이라고 생각할 수 있는 값)에서 멀리 떨어져 있는지를 측정하는 방법입니다.</p>
+
+<p>5살 아이에게 설명한다면, 우리는 "점프하는 거리"의 예를 들 수 있습니다. 상상해봅시다, 철수와 친구들이 멀리 뛰기를 하고 있습니다. 모두가 점프를 하고, 각자 얼마나 멀리 갔는지를 측정합니다. 만약 모든 친구들이 비슷비슷한 거리만큼 점프를 한다면, 우리는 "점프하는 거리에 변동성이 거의 없다"고 말할 수 있어요. 왜냐하면 모두 비슷한 거리만큼 점프를 했기 때문이죠.</p>
+
+<p>하지만, 만약 한 친구가 정말 멀리 점프를 하고, 다른 친구는 그렇게 멀리 점프하지 못한다면, "점프하는 거리의 변동성이 크다"고 말할 수 있습니다. 이 말은 점프하는 거리가 많이 다르다는 뜻입니다. 즉, 친구들이 점프하는 거리가 얼마나 다양한지를 '변동성'이라고 부릅니다.</p>
+
+<p>금융공학에서의 변동성도 비슷한 원리로 이해할 수 있습니다. 사람들이 주식이나 다른 금융 상품을 사고 팔 때, 그 가격이 얼마나 크게 오르락내리락 하는지를 '변동성'이라고 합니다. 만약 모든 사람들이 주식을 같은 가격에 사고 판다면, 그 주식의 변동성은 낮은 것이고, 만약 어떤 날은 가격이 많이 올랐다가 다른 날은 많이 떨어진다면, 그 주식의 변동성은 높은 것이죠.</p>
+
+<p>이처럼 변동성은 우리가 얼마나 큰 변화를 기대할 수 있는지를 알려주는 중요한 단서가 됩니다. 그리고 이런 변동성을 잘 이해하는 것이 금융에서 중요한 결정을 내릴 때 도움이 됩니다.</p>
+
+<h3 id="변동성의-종류">변동성의 종류</h3>
+<p>실제 변동성(actual) : 과거 자산 가격 데이터를 바탕으로 측정한 변동성<br />
+내재 변동성(implied) : 옵션 가격을 바탕으로 시장 참가자들이 기대하는 미래 변동성</p>
+
+<h3 id="변동성은-과거의-값인가-미래를-예측하는-값인가">변동성은 과거의 값인가? 미래를 예측하는 값인가?</h3>
+<p>미래의 주가 변동성은 예측하기 불가능, 지금까지 그 주가가 흘러온 역사를 되돌아보며 흘러왔던 대로 주가의 움직임이 연속될 거라는 가정인것이다. 이처럼, 역사적인 흐름 속에서 산출한 변동성을 역사적 변동성(historical volarility)라고 부른다.
+이 방법은 변동성을 산출하는 방법 중 쉽고 직관적이라 가장 널리 쓰이는 방법이지만 미래를 예측하는 수치는 아닌것.</p>
+
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="3C8B137C-8A0A-41B5-A150-7261E7363AD7"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

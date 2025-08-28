@@ -1,0 +1,12 @@
+{
+ "type": "wiki",
+ "title": "System Design",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/system_design",
+ "updated": "2025-08-28 20:54:38 +0900",
+ "resource": "CFDDB9BB-4E8A-4F8A-B48F-A2E8DB4F3594",
+ "children": [
+  "system_design/kubernetes"
+ ]
+}

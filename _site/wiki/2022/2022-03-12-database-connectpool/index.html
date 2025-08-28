@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>Find the optimal number of connections with DBCP - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2022/2022-03-12-database-connectpool/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Find the optimal number of connections with DBCP">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2022/2022-03-12-database-connectpool/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2022/2022-03-12-database-connectpool/" />
+    <meta name="twitter:title" content="Find the optimal number of connections with DBCP" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2022/database-connectpool"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2022/2022-03-12-database-connectpool/"> Find the optimal number of connections with DBCP </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/database-connectpool.md" target="_blank">created: 2022.03.12</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/database-connectpool.md" target="_blank">updated: 2022.03.12</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2022/database-connectpool.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=Find+the+optimal+number+of+connections+with+DBCP&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#connection-lifecycle" id="markdown-toc-connection-lifecycle"><strong>Connection Lifecycle</strong></a></li>
+  <li><a href="#introduction-to-dbcp" id="markdown-toc-introduction-to-dbcp"><strong>Introduction to DBCP</strong></a></li>
+  <li><a href="#max_connection" id="markdown-toc-max_connection"><strong>max_connection</strong></a></li>
+  <li><a href="#wait_timeout" id="markdown-toc-wait_timeout"><strong>wait_timeout</strong></a></li>
+  <li><a href="#setting-up-dbcp-on-the-server" id="markdown-toc-setting-up-dbcp-on-the-server"><strong>Setting up DBCP on the server</strong></a></li>
+  <li><a href="#finding-the-right-number-of-connections" id="markdown-toc-finding-the-right-number-of-connections"><strong>Finding the right number of connections</strong></a></li>
+  <li><a href="#expected-scenario" id="markdown-toc-expected-scenario"><strong>Expected scenario</strong></a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion"><strong>conclusion</strong></a></li>
+</ul>
+
+<p>When an API request comes from the backend server and accesses the DB, there is a process that receives the DB request 
+and response. This communication uses the TCP network because of its high reliability. The part that should be noted is 
+the operation process of TCP.</p>
+
+<p><img src="https://user-images.githubusercontent.com/72185011/220371260-745afabd-f204-47f6-802b-6be185321ad4.png" alt="image" /></p>
+
+<h3 id="connection-lifecycle"><strong>Connection Lifecycle</strong></h3>
+<p>Before diving into Database Connection Pooling (DBCP), it's crucial to understand the typical connection lifecycle. 
+Connections are opened before a query is requested and closed after the response is received. However, the traditional 
+3-way and 4-way methods of opening and closing connections for each request are not efficient, leading to increased 
+server costs and slower response times.</p>
+
+<p>To solve this problem, the DBCP concept exists.</p>
+
+<h3 id="introduction-to-dbcp"><strong>Introduction to DBCP</strong></h3>
+<p>Database Connection Pooling (DBCP) is a solution designed to address the inefficiencies of the traditional connection 
+methods. Instead of repeatedly opening and closing connections, DBCP involves accessing and allocating pre-made 
+connections, reusing them, and returning them to a connection pool when closed. This significantly reduces the time and 
+resources required for connection management.</p>
+
+<h3 id="max_connection"><strong>max_connection</strong></h3>
+<p>The term "max_connection" refers to the maximum number of connections that can be established with the database 
+simultaneously. If the max_connection is already in use and a new server is added, it cannot be distributed efficiently. 
+Properly setting max_connection is essential for optimal performance.</p>
+
+<h3 id="wait_timeout"><strong>wait_timeout</strong></h3>
+<p>To prevent idle connections from occupying resources indefinitely, a "wait_timeout" can be set. 
+This timeout determines how long a connection will wait before being closed if it remains idle. For example, 
+if set to 60 seconds, the connection will be closed if not used within that timeframe.</p>
+
+<p>You can set a wait_timeout to avoid the weird phenomenon of a connection being occupied but not used. 
+If you set it to 60 seconds, it will wait 60 seconds before deciding whether to close. 
+If a timed request occurs before the end of the wait_timeout, the request will be received, processed, initialized to 0,
+and returned after waiting 60 seconds.</p>
+
+<h3 id="setting-up-dbcp-on-the-server"><strong>Setting up DBCP on the server</strong></h3>
+<p>It is recommended to set "minimumIdle" and "maximumPoolSize" to the same value. This ensures that there are enough 
+connections available, avoiding the need to create new connections during heavy traffic, which incurs additional costs.</p>
+
+<h3 id="finding-the-right-number-of-connections"><strong>Finding the right number of connections</strong></h3>
+<p>To determine the optimal number of connections, it's crucial to set up a monitoring environment and conduct 
+load stress tests. Metrics such as Request per second and Avg response time provide insights into server performance 
+under different loads.</p>
+
+<p>you can use such tools ngrinder or jmeter</p>
+
+<ul>
+  <li>Request per second
+    <ul>
+      <li>How many requests can be processed per unit second</li>
+    </ul>
+  </li>
+  <li>avg response time
+    <ul>
+      <li>How long is the average response time for a request</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="expected-scenario"><strong>Expected scenario</strong></h3>
+
+<ol>
+  <li>Check the CPU and MEM utilization of your backend server and DB server.</li>
+</ol>
+
+<p>If the resource usage of the server goes up when the traffic load goes up to a certain level, 
+you can add more servers to distribute it, and if the DB server's utilization goes up and most of it is due to READ, 
+you can increase the DB's SECONDARY because it is using replication. There are other methods such as sharding.</p>
+
+<ol>
+  <li>check thread per request</li>
+</ol>
+
+<p>If the resource utilization of the backend server and DB server is stable under traffic load, 
+but the graphs of Request per second and Avg response time are slowly declining, I would check the thread per request. 
+This is because the response may be delayed due to insufficient number of active threads.</p>
+
+<ol>
+  <li>maximumPoolSize</li>
+</ol>
+
+<p>If the thread count is slow even though there are 100/50 active, check the number of active connections in DBCP and see 
+if all 5 of the maximumPoolSize are being used. If so, increase the maximumPoolSize. Note that the max_connections of the 
+DB server should be more than that, so that you can respond to additional servers (adding spare servers) in a leisurely manner.</p>
+
+<h2 id="conclusion"><strong>conclusion</strong></h2>
+<p>Determine the max pool size of DBCP based on the number of backend servers to be used. This ensures that the connection 
+pool can effectively handle the expected load, providing optimal performance and resource utilization.</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="CE/7B98C2-F86D-46A9-949B-56BAA0135AF6"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

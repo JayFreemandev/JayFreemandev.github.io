@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/recent/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/recent/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/recent/" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+    <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+    
+<div id="app">
+    <H3 class="indent">최근 변경된 문서</H3>
+    <ul class="post-list">
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/languages/english/">
+                    <div class="post-meta">2025.08.28 - English(TOEFL)</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/languages/deutsch/">
+                    <div class="post-meta">2025.08.28 - Deutsch</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/culture_fit/">
+                    <div class="post-meta">2025.08.28 - Culture fit</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/system_design/">
+                    <div class="post-meta">2025.08.28 - System Design</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/languages/">
+                    <div class="post-meta">2025.08.28 - 언어</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/algorithms_data_structures/">
+                    <div class="post-meta">2025.08.28 - Algorithms & Data Structures</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/project/">
+                    <div class="post-meta">2025.08.28 - Projects</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/links/2025/">
+                    <div class="post-meta">2025.03.08 - 2025년 링크 모음</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/memo/2025/">
+                    <div class="post-meta">2025.03.08 - 2025년 메모</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/review/2025/">
+                    <div class="post-meta">2025.03.08 - 2025년 기록</div>
+                    <div class="post-excerpt">연말에 회고로 제목을 수정할 문서</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/job-market-trend/">
+                    <div class="post-meta">2025.02.22 - job descriptions</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/system_design/kubernetes/">
+                    <div class="post-meta">2025.02.22 - k8s</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/infra/">
+                    <div class="post-meta">2025.02.22 - DevOps</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/system-design/">
+                    <div class="post-meta">2025.02.22 - 시스템 디자인</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/rust/">
+                    <div class="post-meta">2025.02.22 - 러스트</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/solana/architecture/">
+                    <div class="post-meta">2025.02.22 - 고성능 블록체인 아키텍처</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/solana/">
+                    <div class="post-meta">2025.02.22 - Solana</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/petrocurrency/">
+                    <div class="post-meta">2025.02.22 - 석유와 외환 시장의 관계</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/lifehack/productivity/">
+                    <div class="post-meta">2024.09.28 - 생산성</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/intersections-of-equations/">
+                    <div class="post-meta">2024.07.25 - 왜 교점을 구하기 위해서 연립 방정식을 사용하는가?</div>
+                    <div class="post-excerpt">함수의 그래프를 이용한 방정식의 실근의 개수</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/calculus/">
+                    <div class="post-meta">2024.07.15 - 미적분학</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/dbeaver/">
+                    <div class="post-meta">2024.05.17 - 3달동안 모니터링한 의문의 mysql  write lock 문제</div>
+                    <div class="post-excerpt">등잔밑이 어두운 디비버 워크벤치</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/lifehack/paper/">
+                    <div class="post-meta">2024.05.06 - 종이 문서/서류 보관</div>
+                    <div class="post-excerpt">도큐먼트 파일 활용</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/time-weighted-return/">
+                    <div class="post-meta">2024.03.15 - 외부 흐름을 고려한 투자 수익률을 계산하는 방법</div>
+                    <div class="post-excerpt">시간 가중 수익률</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/single-price-auction-call/">
+                    <div class="post-meta">2024.03.11 - 단일가격에 의한 개별경쟁매매(단일가매매)</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/standard-deviation/">
+                    <div class="post-meta">2024.03.03 - 표준편차의 공식이 두가지인 이유</div>
+                    <div class="post-excerpt">표본분산과 차이, n-1로 나누는 이유</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/volatility/">
+                    <div class="post-meta">2024.03.02 - 변동성은 과거의 값인가 미래를 예측하는 값인가</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/summary/20-percent-project/">
+                    <div class="post-meta">2024.03.01 - 구글의 20% 프로젝트 문화</div>
+                    <div class="post-excerpt">5일 근무 중 4일은 일하고 , 하루는 혁신과 실험을 하는 데 쓰라</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/summary/persona/">
+                    <div class="post-meta">2024.03.01 - 불분명한 사용자 관점 개발을 버려라</div>
+                    <div class="post-excerpt">페르소나 디자인 방법론</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/archive/">
+                    <div class="post-meta">2024.02.15 - Article</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/lifehack/health/">
+                    <div class="post-meta">2024.02.15 - 건강</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/lifehack/">
+                    <div class="post-meta">2024.02.15 - Lifehack</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/system-deisgn/test/">
+                    <div class="post-meta">2024.02.15 - test</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/python/test/">
+                    <div class="post-meta">2024.02.15 - test</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/python/">
+                    <div class="post-meta">2024.02.15 - 파이썬</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/summary/how-to-break-goldman-sachs/">
+                    <div class="post-meta">2024.02.14 - 골드만삭스에서 살아남는 방법</div>
+                    <div class="post-excerpt">부회장 짐 도노반 연설</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/summary/">
+                    <div class="post-meta">2024.02.14 - Conference and Article</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/sql/">
+                    <div class="post-meta">2024.02.14 - SQL</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/">
+                    <div class="post-meta">2024.02.14 - Math</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/math/gcd/">
+                    <div class="post-meta">2024.02.14 - 최대공약수와 최소공배수</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/pension/">
+                    <div class="post-meta">2024.02.14 - 받지 못할 연금을 위한</div>
+                    <div class="post-excerpt">국민연금, 퇴직연금, 개인연금</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/memo/2024/">
+                    <div class="post-meta">2024.02.13 - 2024년 메모</div>
+                    <div class="post-excerpt">나의 일기</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/memo/">
+                    <div class="post-meta">2024.02.13 - Memo</div>
+                    <div class="post-excerpt">임시 기록</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/links/2024/">
+                    <div class="post-meta">2024.02.13 - 2024년 링크 모음</div>
+                    <div class="post-excerpt">여기로 옮겨두고 휴대폰 웹 브라우저 탭 좀 줄이자</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/links/">
+                    <div class="post-meta">2024.02.13 - Links</div>
+                    <div class="post-excerpt">다시 읽고 싶은 링크 모음</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/review/2024/">
+                    <div class="post-meta">2024.02.13 - 2024년 회고</div>
+                    <div class="post-excerpt">솔라나의 해</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/review/2023/">
+                    <div class="post-meta">2024.02.13 - 2023년 회고</div>
+                    <div class="post-excerpt">컨퍼런스를 많이 본 한 해였다</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/review/2022/">
+                    <div class="post-meta">2024.02.13 - 2022년 회고</div>
+                    <div class="post-excerpt">정신적으로 고생한 해였다</div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/review/">
+                    <div class="post-meta">2024.02.13 - 회고모음</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/health/">
+                    <div class="post-meta">2024.02.13 - Health</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2023/2022-10-24-good-practice-http-api-archetecture/">
+                    <div class="post-meta">2023.10.24 - Best practice of HTTP API architecture</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2023/2023-03-10-cloud-flatform-intro-feat-aws/">
+                    <div class="post-meta">2023.03.10 - How they reduce 80% cost by moving away from aws</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2023/2023-01-29-how-springboot-handle-multiple-requests/">
+                    <div class="post-meta">2023.01.29 - How Springboot handle multiple requests(thread pool)</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/quant/">
+                    <div class="post-meta">2022.12.06 - Quant&Finance</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/programming/">
+                    <div class="post-meta">2022.12.06 - Programming</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/finance/">
+                    <div class="post-meta">2022.12.06 - Finance</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-11-01-virtural-memory/">
+                    <div class="post-meta">2022.11.01 - About virtual memory</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-10-11-short-memo-on-spring-transaction/">
+                    <div class="post-meta">2022.10.11 - short memo on spring transaction</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-08-01-fundamental-reason-of-service-layor/">
+                    <div class="post-meta">2022.08.01 - layered architecture, fundamental reason of service layor</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-06-29-why-stream-is-slower-than-for-loop/">
+                    <div class="post-meta">2022.06.29 - Why steam is slower than for loop(performance benchmark)</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-04-21-redis-can-not-be-main/">
+                    <div class="post-meta">2022.04.21 - Why you can't use Redis as your main DB</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/2022/2022-03-12-database-connectpool/">
+                    <div class="post-meta">2022.03.12 - Find the optimal number of connections with DBCP</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a class="post-link" href="/wiki/index/">
+                    <div class="post-meta">2021.07.25 - ROOT</div>
+                    <div class="post-excerpt"></div>
+        
+                    <ul class="tag-list"><li class="post-tag"></li></ul>
+        
+                </a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+
+    <footer class="footer">
+    <div>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

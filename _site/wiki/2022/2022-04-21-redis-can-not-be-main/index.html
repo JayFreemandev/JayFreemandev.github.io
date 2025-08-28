@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>Why you can't use Redis as your main DB - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2022/2022-04-21-redis-can-not-be-main/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Why you can't use Redis as your main DB">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2022/2022-04-21-redis-can-not-be-main/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2022/2022-04-21-redis-can-not-be-main/" />
+    <meta name="twitter:title" content="Why you can't use Redis as your main DB" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2022/redis-can-not-be-main"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2022/2022-04-21-redis-can-not-be-main/"> Why you can't use Redis as your main DB </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/redis-can-not-be-main.md" target="_blank">created: 2022.04.21</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/redis-can-not-be-main.md" target="_blank">updated: 2022.04.21</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2022/redis-can-not-be-main.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=Why+you+can%27t+use+Redis+as+your+main+DB&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#why-disk-based-databases-are-slower-compared-to-redis" id="markdown-toc-why-disk-based-databases-are-slower-compared-to-redis"><strong>Why Disk-based Databases are Slower Compared to Redis</strong></a></li>
+  <li><a href="#why-redis-is-unsuitable-as-the-main-database" id="markdown-toc-why-redis-is-unsuitable-as-the-main-database"><strong>Why Redis is Unsuitable as the Main Database</strong></a></li>
+  <li><a href="#storage-capacity-constraints" id="markdown-toc-storage-capacity-constraints"><strong>Storage Capacity Constraints</strong></a></li>
+  <li><a href="#performance-degradation-under-heavy-loads" id="markdown-toc-performance-degradation-under-heavy-loads"><strong>Performance Degradation under Heavy Loads</strong></a></li>
+  <li><a href="#cost-and-persistence-trade-offs" id="markdown-toc-cost-and-persistence-trade-offs"><strong>Cost and Persistence Trade-offs</strong></a></li>
+  <li><a href="#optimal-use-as-a-cache" id="markdown-toc-optimal-use-as-a-cache"><strong>Optimal Use as a Cache</strong></a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion"><strong>conclusion</strong></a></li>
+</ul>
+
+<p>Redis is an In-Memory Database (DB) that stores data in memory rather than on disk, making it faster than disk-based DBs.
+Disk-based databases read data from disk to memory, introducing delays and slower performance. In-Memory DBs, like Redis,
+directly access data from memory, eliminating this bottleneck.</p>
+
+<p>However, there are drawbacks to in-memory databases. RAM, where data is stored, is volatile and lacks persistence guarantees.
+Also, RAM has limited space, e.g., 8GB, making it unsuitable for storing large amounts of data without causing memory swaps,
+leading to performance issues.</p>
+
+<h3 id="why-disk-based-databases-are-slower-compared-to-redis"><strong>Why Disk-based Databases are Slower Compared to Redis</strong></h3>
+<p>Disk-based databases face inherent limitations due to their reliance on external storage, introducing latency in data
+retrieval and updates. When data is stored on disk, a read operation involves fetching the data from the disk into memory
+before it can be used.</p>
+
+<p>Additionally, disk-based databases typically read data in pages, leading to inefficiencies.
+For instance, if the desired data is on page 2 and page 1 has already been read, the system may reread page 2,
+causing delays and reducing performance.</p>
+
+<h3 id="why-redis-is-unsuitable-as-the-main-database"><strong>Why Redis is Unsuitable as the Main Database</strong></h3>
+<p>Redis, being an In-Memory Database (DB) with data stored primarily in RAM, offers unparalleled speed compared to
+disk-based databases. However, several factors limit its viability as the main database</p>
+
+<ul>
+  <li>
+    <p>Wide Data Structure Support:
+Redis distinguishes itself by supporting various data structures such as Strings, Bitmaps, Hashes, Lists, Sets, 
+and Sorted-Sets. This versatility simplifies development and reduces barriers to entry.</p>
+  </li>
+  <li>
+    <p>Persistence Mechanisms:
+While in-memory databases lack persistence by default, Redis provides methods to ensure data durability:</p>
+  </li>
+  <li>
+    <p>Snapshotting: Takes a snapshot of the entire in-memory data and writes it to disk.
+Append On File (AOF): Logs every write/update operation to a file.</p>
+  </li>
+</ul>
+
+<p>Despite Redis addressing persistence concerns, it is not ideal as a main DB for several reasons</p>
+
+<h3 id="storage-capacity-constraints"><strong>Storage Capacity Constraints</strong></h3>
+<p>In-memory databases like Redis rely on RAM for storage, imposing a severe limitation on the amount of data they can handle.
+With RAM being volatile and typically constrained (e.g., 8GB), Redis is unsuitable for serving as the primary database
+for large-scale applications that require extensive data storage.</p>
+
+<h3 id="performance-degradation-under-heavy-loads"><strong>Performance Degradation under Heavy Loads</strong></h3>
+<p>In scenarios where a significant volume of data is received, the limited storage space in RAM can lead to memory swapping.
+This results in decreased performance as the system struggles to manage data in and out of memory. The trade-off between
+high performance and cost becomes impractical for sustained heavy traffic.</p>
+
+<h3 id="cost-and-persistence-trade-offs"><strong>Cost and Persistence Trade-offs</strong></h3>
+<p>While Redis provides mechanisms like Snapshotting and Append On File (AOF) to ensure data persistence,
+the cost of maintaining high-performance, in-memory capabilities might not be justified when compared to other disk-based
+databases. The advantage of Redis in terms of speed diminishes when the need for persistent storage is prioritized.</p>
+
+<h3 id="optimal-use-as-a-cache"><strong>Optimal Use as a Cache</strong></h3>
+<p>Redis is commonly employed as a cache for data from disk-based databases rather than as the primary storage solution.
+Its in-memory retrieval speed proves beneficial for caching frequently accessed or time-sensitive data,
+enhancing performance without the limitations associated with serving as the main database.</p>
+
+<h2 id="conclusion"><strong>conclusion</strong></h2>
+<p>In practice, Redis is commonly used not as the main database but for caching data from other main databases.
+Its fast in-memory retrieval is leveraged to enhance performance in scenarios where the limitations of storage
+capacity and cost-effectiveness are acceptable trade-offs.</p>
+
+<p>In summary, while Redis excels in certain applications due to its in-memory nature and support for various data structures,
+its limitations in storage capacity, potential performance issues during high traffic, and the cost-effectiveness of
+maintaining persistence make it better suited as a cache for data from more traditional disk-based main databases.</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="64/2F57A9-C9EC-49D8-B99E-9183DECBBE4D"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>

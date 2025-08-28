@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>short memo on spring transaction - Jay Freeman</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/wiki/2022/2022-10-11-short-memo-on-spring-transaction/">
+    <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="short memo on spring transaction">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
+    <meta property="og:url" content="http://localhost:4000/wiki/2022/2022-10-11-short-memo-on-spring-transaction/">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nomoregosiwon" />
+    <meta name="twitter:url" content="http://localhost:4000/wiki/2022/2022-10-11-short-memo-on-spring-transaction/" />
+    <meta name="twitter:title" content="short memo on spring transaction" />
+    <meta name="twitter:description" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7V8JF7VV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J7V8JF7VV1');
+    </script>
+
+
+
+</head>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">Jay Freeman</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    <body>
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" Search " type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="2022/short-memo-on-spring-transaction"/>
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/2022/2022-10-11-short-memo-on-spring-transaction/"> short memo on spring transaction </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/short-memo-on-spring-transaction.md" target="_blank">created: 2022.10.11</a></p>
+            <p><a href="https://github.com/JayFreemandev/JayFreemandev.github.io/blame/master/_wiki/2022/short-memo-on-spring-transaction.md" target="_blank">updated: 2022.10.11</a></p>
+            <p>
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/edit/master/_wiki/2022/short-memo-on-spring-transaction.md">편집하기</a>
+                /
+                <a href="https://github.com/JayFreemandev/JayFreemandev.github.io/issues/new?title=short+memo+on+spring+transaction&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#how-spring-framework-solves-this-problem" id="markdown-toc-how-spring-framework-solves-this-problem"><strong>How Spring Framework solves this problem</strong></a></li>
+  <li><a href="#deep-dive-into-the-platformtransactionmanager" id="markdown-toc-deep-dive-into-the-platformtransactionmanager"><strong>deep dive into the PlatformTransactionManager</strong></a></li>
+  <li><a href="#transaction-proxy-is-a-mechanism" id="markdown-toc-transaction-proxy-is-a-mechanism"><strong>Transaction Proxy is a mechanism</strong></a></li>
+  <li><a href="#spring-transactiontemplate" id="markdown-toc-spring-transactiontemplate"><strong>Spring TransactionTemplate</strong></a></li>
+</ul>
+
+<h3 id="how-spring-framework-solves-this-problem"><strong>How Spring Framework solves this problem</strong></h3>
+<p>through the abstraction provided by the PlatformTransactionManager interface. This interface serves as the top-level 
+interface for transaction management, and the process involves registering an implementation of this interface as a 
+Bean in the Spring configuration file and injecting it where needed.</p>
+
+<p>For instance, there are different implementations of the PlatformTransactionManager interface, each tailored to a 
+specific environment. Here are a few examples:</p>
+
+<ul>
+  <li>
+    <p>DataSourceTransactionManager: Used when accessing databases using JDBC-based libraries such as JDBC or MyBatis.</p>
+  </li>
+  <li>
+    <p>HibernateTransactionManager: Utilized when accessing databases using the Hibernate framework.</p>
+  </li>
+  <li>
+    <p>JpaTransactionManager: Employed when accessing databases using the Java Persistence API (JPA).</p>
+  </li>
+</ul>
+
+<p>By configuring the appropriate PlatformTransactionManager for the specific data access technology in use,
+Spring enables a flexible and consistent approach to transaction management. If there's a need to change the data access 
+technology, it can be accomplished by simply modifying the configuration file.
+This allows for a uniform application of changes across the system.</p>
+
+<p>The design ensures that changes related to business logic in the Service classes are isolated. Only when there are
+modifications to the business logic do the Service classes need to be updated, promoting a separation of concerns and 
+facilitating maintainability.</p>
+
+<p>the abstraction of transactions in Spring separates code with distinct characteristics into different layers: 
+the application's business logic and the low-level transactional technologies operating beneath it.</p>
+
+<h3 id="deep-dive-into-the-platformtransactionmanager"><strong>deep dive into the PlatformTransactionManager</strong></h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PlatformTransactionManager</span> <span class="o">{</span>
+   <span class="nc">TransactionStatus</span> <span class="nf">getTransaction</span><span class="o">(</span><span class="nc">TransactionDefinition</span> <span class="n">definition</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">TransactionException</span><span class="o">;</span>
+   <span class="kt">void</span> <span class="nf">commit</span><span class="o">(</span><span class="nc">TransactionStatus</span> <span class="n">status</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">TransactionException</span><span class="o">;</span>
+   <span class="kt">void</span> <span class="nf">rollback</span><span class="o">(</span><span class="nc">TransactionStatus</span> <span class="n">status</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">TransactionException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>The transactional strategy in the Spring Framework is explicitly specified in the PlatformTransactionManager. 
+Examining the interface specification, the following methods are defined</p>
+
+<p><strong>getTransaction</strong> Takes a TransactionDefinition as an argument.
+Returns a TransactionStatus.
+Used in determining where a transaction begins and ends and whether it concludes normally (commit) or abnormally (rollback).</p>
+
+<p><strong>commit</strong>
+Takes a TransactionStatus as an argument.
+Commits the transaction.</p>
+
+<p><strong>rollback</strong> Takes a TransactionStatus as an argument.
+Rolls back the transaction.
+The PlatformTransactionManager is employed in the process of defining the boundaries of a transaction. 
+It answers questions like when a transaction starts and when it concludes—whether it concludes normally (commit) or 
+abnormally (rollback).</p>
+
+<p>Looking at the getTransaction method, it takes a TransactionDefinition as an argument. The TransactionDefinition 
+interface provides information such as</p>
+
+<p><strong>Isolation:</strong>
+Indicates the isolation level of the transaction, specifying the degree to which the transaction is isolated from the 
+operations of other transactions.</p>
+
+<p><strong>Propagation:</strong>
+Represents the propagation behavior of the transaction. It references the propagation attribute at the starting point 
+of the transaction boundary, determining how the transaction within that scope should proceed.</p>
+
+<p><strong>Timeout:</strong> Denotes the maximum amount of time the transaction is allowed to run. If the specified time elapses, the transaction 
+is rolled back. This parameter indicates how long the transaction has been running before the infrastructure automatically 
+rolls it back.</p>
+
+<p><strong>Read-only:</strong> Specifies whether the transaction is read-only. This option is useful, for instance, in Hibernate, 
+to determine if the 
+transaction is read-only.
+The TransactionStatus encapsulates the ID and distinguishing information of the currently participating transaction. 
+It is used during the commit or rollback operations.</p>
+
+<p>The getTransaction method signifies the initiation of a transaction, similar to a begin() operation. In Spring, 
+the initiation and conclusion of transactions are flexibly combined and extended using transaction propagation techniques. 
+Therefore, instead of explicitly beginning a transaction (as in begin()), the getTransaction() method is used to obtain 
+the appropriate transaction based on the transaction attributes.</p>
+
+<p>getTransaction() dynamically behaves based on the transaction attributes, either starting a new transaction,</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">TransactionStatus</span> <span class="kd">extends</span> <span class="nc">SavepointManager</span> <span class="o">{</span>
+ <span class="kt">boolean</span> <span class="nf">isNewTransaction</span><span class="o">();</span> <span class="c1">// new transaction exsit?</span>
+ <span class="kt">boolean</span> <span class="nf">hasSavepoint</span><span class="o">();</span> <span class="c1">// current same transaction exist?</span>
+ <span class="kt">void</span> <span class="nf">setRollbackOnly</span><span class="o">();</span> <span class="c1">// rollback possible?</span>
+ <span class="kt">boolean</span> <span class="nf">isRollbackOnly</span><span class="o">();</span> <span class="c1">// rollback finished?</span>
+ <span class="kt">void</span> <span class="nf">flush</span><span class="o">();</span> <span class="c1">// db sync</span>
+ <span class="kt">boolean</span> <span class="nf">isCompleted</span><span class="o">();</span> <span class="c1">// transaction finished?</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>joining an existing one, or ignoring the ongoing transaction and creating a new one, depending on the situation.</p>
+
+<h3 id="transaction-proxy-is-a-mechanism"><strong>Transaction Proxy is a mechanism</strong></h3>
+<p><img src="../../resource/img/spring_boot/proxy.png" alt="img.png" /></p>
+
+<p>The caller invokes the AOP proxy. In this process, the proxy does not invoke the target itself. 
+The AOP proxy calls the Transaction Advisor, during which committing or rolling back may occur.
+If there is a Custom Advisor, it operates before and after the Transaction Advisor. The Custom Advisor invokes the 
+Target Method, executing the business logic. Subsequently, the results are returned in order.</p>
+
+<h3 id="spring-transactiontemplate"><strong>Spring TransactionTemplate</strong></h3>
+<p>Many Spring books advise separating DB transactions from business logic, a principle I have also learned. However, 
+in services where DB transactions are crucial, performance considerations should also be taken into account when 
+implementing business logic. In other words, there's an argument that developers might be better off directly managing 
+transaction code.</p>
+
+<p>Especially in services with high importance for DBMS types, considering differences in DB lock duration or read 
+consistency, and the resulting issues with service concurrency, the AOP approach to transactions with method-level 
+boundaries may be inefficient. For instance, imagine attaching a transaction through AOP to a method with a significant 
+execution time. This could unnecessarily occupy a DB connection or extend the duration of DB lock retention.</p>
+
+<p>I previously explained the usage of transactions with Spring AOP, particularly the convenient transaction declaration 
+using @Transactional. However, it's important to note that it may not work in cases like the one described above.
+The reason why the Spring AOP-style transaction may not be applied is because it operates through a proxy mechanism.</p>
+
+<p>In this context, the target method invoked by invoke() is the actual doInternalTransaction(), not the proxy's 
+doInternalTransaction(). Consider that a proxy is effective only when the object is injected from outside the class or 
+interface.</p>
+
+<p>Certainly, you could apply @Transactional to the invoke() method using the AOP approach, but as mentioned earlier, 
+it may lead to inefficiencies. In such cases, there is a need for developers to manually set the transaction boundaries, 
+and the tool that can be employed for this purpose is the TransactionTemplate.</p>
+
+    </article>
+
+
+    
+    <div class="giscus"></div>
+    <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="JayFreemandev/JayFreemandev.github.io"
+        data-repo-id="R_kgDOK4pOCQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK4pOCc4CdQve"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="86/CDE116-F3C6-4D90-9E08-DD127D27F6E4"
+        data-strict="0"
+        async>
+    </script>
+    </div>
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+<!-- 
+    <script data-ad-client="pub-1852874037333345" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ -->
+</footer>
+    </body>
+</html>
