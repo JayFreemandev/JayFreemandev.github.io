@@ -11,18 +11,18 @@
     <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="http://localhost:4000/projects/">
     <link rel="alternate" type="application/rss+xml" title="Jay Freeman" href="http://localhost:4000/feed.xml" />
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="http://localhost:4000/resource/jay.jpg">
-    <meta property="og:url" content="http://localhost:4000/about/">
+    <meta property="og:url" content="http://localhost:4000/projects/">
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@nomoregosiwon" />
-    <meta name="twitter:url" content="http://localhost:4000/about/" />
+    <meta name="twitter:url" content="http://localhost:4000/projects/" />
     <meta name="twitter:title" content="" />
     <meta name="twitter:description" content="" />
 
@@ -90,14 +90,7 @@
 
     <article class="post-content">
 
-        <ul id="markdown-toc">
-  <li><a href="#motto" id="markdown-toc-motto">Motto</a></li>
-  <li><a href="#-about-me" id="markdown-toc--about-me">🔭 About Me</a></li>
-  <li><a href="#-open-source-contribution" id="markdown-toc--open-source-contribution">🌐 Open Source Contribution</a></li>
-  <li><a href="#-deep-domain-knowledge" id="markdown-toc--deep-domain-knowledge">📚 Deep Domain Knowledge</a></li>
-  <li><a href="#-job-experience" id="markdown-toc--job-experience">💼 Job Experience</a></li>
-</ul>
-
+        
 <div class="contact">
 
         <a href="https://github.com/JayFreemandev">GitHub</a>
@@ -111,47 +104,154 @@
         <a href="/feed.xml">RSS</a>
 </div>
 
-<h2 id="motto">Motto</h2>
+<main class="p-6">
+  <!-- Summary Section -->
+  <section class="max-w-prose mx-auto prose p-6">
+    <h1>Projects</h1>
+    <p>A running list of projects I've built.</p>
+    <p><span class="font-bold">Total Projects:</span> 5</p>
+    <ul>
+      <li>🟢 <span class="font-bold">Active:</span> 2 - Currently developing</li>
+      <li>🟡 <span class="font-bold">Passive:</span> 2 - Running but not developing</li>
+      <li>🔴 <span class="font-bold">ShutDown:</span> 1 - No longer running</li>
+    </ul>
+  </section>
 
-<blockquote>
-  <p>Do not trust corrupted memories – Master Yi</p>
+  <!-- Active -->
+  <section class="max-w-3xl mx-auto prose">
+    <h2>Active Projects</h2>
+    <table>
+      <thead class="font-semibold border-b">
+        <tr>
+          <th>State</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🟢</td>
+          <td class="px-2">Relative Strength Screener</td>
+          <td>2023</td>
+          <td>KOSPI/KOSDAQ/NASDAQ relative strength rotation tool</td>
+        </tr>
+        <tr>
+          <td>🟢</td>
+          <td class="px-2">Short Momentum Nasdaq Screener</td>
+          <td>2024</td>
+          <td>Momentum strategy applied to Nasdaq shorts</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-  <p>기억의 오류에 의존하지 마시오. - 마스터이</p>
-</blockquote>
+  <!-- Passive -->
+  <section class="max-w-3xl mx-auto prose p-6">
+    <h2>Passive Projects</h2>
+    <table>
+      <thead class="font-semibold border-b">
+        <tr>
+          <th>State</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🟡</td>
+          <td class="px-2">Spitfire Systematic Trading</td>
+          <td>2025</td>
+          <td>Framework for systematic trading strategies</td>
+        </tr>
+        <tr>
+          <td>🟡</td>
+          <td class="px-2">TradeScope Dashboard</td>
+          <td>2025</td>
+          <td>Trading asset management dashboard</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-<h2 id="-about-me">🔭 About Me</h2>
+  <!-- Shutdown -->
+  <section class="max-w-3xl mx-auto prose p-6">
+    <h2>Shutdown Projects</h2>
+    <table>
+      <thead class="font-semibold border-b">
+        <tr>
+          <th>State</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🔴</td>
+          <td class="px-2">Bitcoin Whale Transaction Detect</td>
+          <td>2022</td>
+          <td>Tracked on-chain whale transactions for signal generation</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-<ul>
-  <li>Designing and implementing scalable and maintainable architectures.</li>
-  <li>Developing clean and readable code for efficient software solutions.</li>
-  <li>Applying mathematical analysis to solve complex problems. .</li>
-</ul>
-
-<h2 id="-open-source-contribution">🌐 Open Source Contribution</h2>
-
-<ul>
-  <li>
-    <p><strong><a href="https://github.com/ranaroussi/quantstats">QuantStats - Portfolio analytics</a></strong><br />
-QuantStats is one of best with in-depth <strong>performance analytics</strong> and <strong>risk metrics</strong></p>
-  </li>
-  <li>
-    <p><strong><a href="https://github.com/robcarver17/pysystemtrade">Pysystemtrade - Backtest</a></strong> <br />
-Pysystemtrade is <strong>backtesting</strong> and trading engine provide the driving force that ensures I never cease to learn.</p>
-  </li>
-</ul>
-
-<h2 id="-deep-domain-knowledge">📚 Deep Domain Knowledge</h2>
-<ul>
-  <li><a href="https://github.com/quant-beaver">Happy-Quant-Jounrey</a> This repo is for sharing resources in quant ecosystem especially python.
-many books and videos to code, for learners eager to explore the depths of quantitative finance and technology.</li>
-</ul>
-
-<h2 id="-job-experience">💼 Job Experience</h2>
-
-<ul>
-  <li>Software Engineer (Oct 2023 ~ Present)</li>
-  <li>crypto exchange - Software Engineer (Jan 2022 ~ June 2023)</li>
-</ul>
+  <!-- All Projects -->
+  <section class="max-w-3xl mx-auto prose p-6">
+    <h2>All Projects</h2>
+    <p>Complete list of projects including active, passive, and shutdown.</p>
+    <table>
+      <thead class="font-semibold border-b">
+        <tr>
+          <th>State</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>Category</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🟢</td>
+          <td class="px-2">Relative Strength Screener</td>
+          <td>2023</td>
+          <td>Active</td>
+          <td>KOSPI/KOSDAQ/NASDAQ relative strength rotation tool</td>
+        </tr>
+        <tr>
+          <td>🟢</td>
+          <td class="px-2">Short Momentum Nasdaq Screener</td>
+          <td>2024</td>
+          <td>Active</td>
+          <td>Momentum strategy applied to Nasdaq shorts</td>
+        </tr>
+        <tr>
+          <td>🟡</td>
+          <td class="px-2">Spitfire Systematic Trading</td>
+          <td>2025</td>
+          <td>Passive</td>
+          <td>Framework for systematic trading strategies</td>
+        </tr>
+        <tr>
+          <td>🟡</td>
+          <td class="px-2">TradeScope Dashboard</td>
+          <td>2025</td>
+          <td>Passive</td>
+          <td>Trading asset management dashboard</td>
+        </tr>
+        <tr>
+          <td>🔴</td>
+          <td class="px-2">Bitcoin Whale Transaction Detect</td>
+          <td>2022</td>
+          <td>Shutdown</td>
+          <td>Tracked on-chain whale transactions for signal generation</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
 
 
     </article>
