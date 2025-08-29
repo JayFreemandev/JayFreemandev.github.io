@@ -29,6 +29,8 @@ regenerate: true
 
 ##### [[/culture_fit]]
 
+##### [[/live]] 
+
 ##### [[/math]]
 - [[/math/gcd]]
 - [[/math/standard-deviation]]
@@ -52,7 +54,6 @@ regenerate: true
 ##### [[/summary]]
 - [[/summary/how-to-break-goldman-sachs]]
 - [[/summary/persona]]
-- [[/summary/20-percent-project]]
 
 ##### [[/lifehack]]
 - [[/lifehack/health]]
