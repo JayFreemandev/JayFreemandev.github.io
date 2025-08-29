@@ -1,7 +1,10 @@
 {
-    "triggerTaskOnSave.tasks": {
-        "precommit": [
-          "*", // <-- Glob pattern to specify which files should trigger the task
-        ],
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*\\.md$",
+        "cmd": "sh ./tool/pre-commit ${file}"
       }
+    ]
+  }
 }

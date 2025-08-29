@@ -92,166 +92,82 @@
 
         
 <div class="contact">
-
-        <a href="https://github.com/JayFreemandev">GitHub</a>
-
-
-        <a href="https://twitter.com/nomoregosiwon">Twitter</a>
-
-
-        <a href="mailto:jayfreemandev@gmail.com">Email</a>
-
-        <a href="/feed.xml">RSS</a>
+  
+    <a href="https://github.com/JayFreemandev">GitHub</a>
+  
+  
+    <a href="https://twitter.com/nomoregosiwon">Twitter</a>
+  
+  
+    <a href="mailto:jayfreemandev@gmail.com">Email</a>
+  
+  <a href="/feed.xml">RSS</a>
 </div>
 
-<main class="p-6">
-  <!-- Summary Section -->
-  <section class="max-w-prose mx-auto prose p-6">
-    <h1>Projects</h1>
-    <p>A running list of projects I've built.</p>
-    <p><span class="font-bold">Total Projects:</span> 5</p>
-    <ul>
-      <li>🟢 <span class="font-bold">Active:</span> 2 - Currently developing</li>
-      <li>🟡 <span class="font-bold">Passive:</span> 2 - Running but not developing</li>
-      <li>🔴 <span class="font-bold">ShutDown:</span> 1 - No longer running</li>
-    </ul>
-  </section>
+<!-- 여기에 JS가 내용을 주입할 타겟 -->
+<div id="projects-app"></div>
 
-  <!-- Active -->
-  <section class="max-w-3xl mx-auto prose">
-    <h2>Active Projects</h2>
-    <table>
-      <thead class="font-semibold border-b">
-        <tr>
-          <th>State</th>
-          <th>Name</th>
-          <th>Start</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>🟢</td>
-          <td class="px-2">Relative Strength Screener</td>
-          <td>2023</td>
-          <td>KOSPI/KOSDAQ/NASDAQ relative strength rotation tool</td>
-        </tr>
-        <tr>
-          <td>🟢</td>
-          <td class="px-2">Short Momentum Nasdaq Screener</td>
-          <td>2024</td>
-          <td>Momentum strategy applied to Nasdaq shorts</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+<script>
+const projects = [
+  { state: "🟢", status: "Active", name: "Relative Strength Screener", start: 2023, desc: "KOSPI/KOSDAQ/NASDAQ relative strength scores" },
+  { state: "🟢", status: "Active", name: "Short Momentum Nasdaq Screener", start: 2024, desc: "Momentum strategy applied to Nasdaq shorts" },
+  { state: "🟡", status: "Passive", name: "Spitfire Systematic Trading", start: 2025, desc: "live execution of systematic trading strategies in BTC/ETH market" },
+  { state: "🟡", status: "Passive", name: "Trading asset management dashboard", start: 2025, desc: "dashboard for performance analytics: win rate, risk-reward ratio, trade frequency, and rule adherence tracking" },
+  { state: "🔴", status: "Shutdown", name: "Bitcoin Whale Transaction Detect", start: 2022, desc: "Tracked on-chain whale transactions for signal generation" }
+];
 
-  <!-- Passive -->
-  <section class="max-w-3xl mx-auto prose p-6">
-    <h2>Passive Projects</h2>
-    <table>
-      <thead class="font-semibold border-b">
-        <tr>
-          <th>State</th>
-          <th>Name</th>
-          <th>Start</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>🟡</td>
-          <td class="px-2">Spitfire Systematic Trading</td>
-          <td>2025</td>
-          <td>Framework for systematic trading strategies</td>
-        </tr>
-        <tr>
-          <td>🟡</td>
-          <td class="px-2">TradeScope Dashboard</td>
-          <td>2025</td>
-          <td>Trading asset management dashboard</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+function renderSummary(list) {
+  const total = list.length;
+  const active = list.filter(p => p.status === "Active").length;
+  const passive = list.filter(p => p.status === "Passive").length;
+  const shutdown = list.filter(p => p.status === "Shutdown").length;
+  return `
+    <section class="max-w-prose mx-auto prose p-6">
+      <h1>Projects</h1>
+      <p>A running list of projects I've built.</p>
+      <p><span class="font-bold">Total Projects:</span> ${total}</p>
+      <ul>
+        <li>🟢 <b>Active:</b> ${active}</li>
+        <li>🟡 <b>Passive:</b> ${passive}</li>
+        <li>🔴 <b>Shutdown:</b> ${shutdown}</li>
+      </ul>
+    </section>
+  `;
+}
 
-  <!-- Shutdown -->
-  <section class="max-w-3xl mx-auto prose p-6">
-    <h2>Shutdown Projects</h2>
-    <table>
-      <thead class="font-semibold border-b">
-        <tr>
-          <th>State</th>
-          <th>Name</th>
-          <th>Start</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>🔴</td>
-          <td class="px-2">Bitcoin Whale Transaction Detect</td>
-          <td>2022</td>
-          <td>Tracked on-chain whale transactions for signal generation</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+function renderTable(title, list) {
+  if (!list.length) return "";
+  return `
+    <section class="max-w-3xl mx-auto prose p-6">
+      <h2>${title}</h2>
+      <table>
+        <thead>
+          <tr><th>State</th><th>Name</th><th>Start</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          ${list.map(p => `
+            <tr>
+              <td>${p.state}</td>
+              <td class="px-2">${p.name}</td>
+              <td>${p.start}</td>
+              <td>${p.desc}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </section>
+  `;
+}
 
-  <!-- All Projects -->
-  <section class="max-w-3xl mx-auto prose p-6">
-    <h2>All Projects</h2>
-    <p>Complete list of projects including active, passive, and shutdown.</p>
-    <table>
-      <thead class="font-semibold border-b">
-        <tr>
-          <th>State</th>
-          <th>Name</th>
-          <th>Start</th>
-          <th>Category</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>🟢</td>
-          <td class="px-2">Relative Strength Screener</td>
-          <td>2023</td>
-          <td>Active</td>
-          <td>KOSPI/KOSDAQ/NASDAQ relative strength rotation tool</td>
-        </tr>
-        <tr>
-          <td>🟢</td>
-          <td class="px-2">Short Momentum Nasdaq Screener</td>
-          <td>2024</td>
-          <td>Active</td>
-          <td>Momentum strategy applied to Nasdaq shorts</td>
-        </tr>
-        <tr>
-          <td>🟡</td>
-          <td class="px-2">Spitfire Systematic Trading</td>
-          <td>2025</td>
-          <td>Passive</td>
-          <td>Framework for systematic trading strategies</td>
-        </tr>
-        <tr>
-          <td>🟡</td>
-          <td class="px-2">TradeScope Dashboard</td>
-          <td>2025</td>
-          <td>Passive</td>
-          <td>Trading asset management dashboard</td>
-        </tr>
-        <tr>
-          <td>🔴</td>
-          <td class="px-2">Bitcoin Whale Transaction Detect</td>
-          <td>2022</td>
-          <td>Shutdown</td>
-          <td>Tracked on-chain whale transactions for signal generation</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</main>
+document.getElementById("projects-app").innerHTML = `
+  ${renderSummary(projects)}
+  ${renderTable("All Projects", projects)}
+  ${renderTable("Active Projects", projects.filter(p => p.status === "Active"))}
+  ${renderTable("Passive Projects", projects.filter(p => p.status === "Passive"))}
+  ${renderTable("Shutdown Projects", projects.filter(p => p.status === "Shutdown"))}
+`;
+</script>
+
 
 
     </article>
