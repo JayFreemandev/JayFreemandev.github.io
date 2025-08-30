@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : 언어 
+title   : Languages
 summary : 
 date    : 2025-08-28 20:39:59 +0900
 updated : 2025-08-28 20:39:59 +0900

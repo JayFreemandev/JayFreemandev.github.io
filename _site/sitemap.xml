@@ -1091,5 +1091,90 @@
     </url>
     
 
+    
+    <url>
+        <loc>http://localhost:4000/wiki/languages/english/Reading/</loc>
+        
+            <lastmod>2025-08-30T22:16:51+09:00</lastmod>
+        
+
+        
+            <changefreq>daily</changefreq>
+        
+
+        
+            <priority>0.5</priority>
+        
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/wiki/languages/english/Listening/</loc>
+        
+            <lastmod>2025-08-30T22:17:11+09:00</lastmod>
+        
+
+        
+            <changefreq>daily</changefreq>
+        
+
+        
+            <priority>0.5</priority>
+        
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/wiki/languages/english/Speaking/</loc>
+        
+            <lastmod>2025-08-30T22:17:28+09:00</lastmod>
+        
+
+        
+            <changefreq>daily</changefreq>
+        
+
+        
+            <priority>0.5</priority>
+        
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/wiki/languages/english/Writing/</loc>
+        
+            <lastmod>2025-08-30T22:17:47+09:00</lastmod>
+        
+
+        
+            <changefreq>daily</changefreq>
+        
+
+        
+            <priority>0.5</priority>
+        
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/wiki/live/</loc>
+        
+            <lastmod>2025-08-30T22:38:48+09:00</lastmod>
+        
+
+        
+            <changefreq>daily</changefreq>
+        
+
+        
+            <priority>0.5</priority>
+        
+    </url>
+    
+
 </urlset>
 

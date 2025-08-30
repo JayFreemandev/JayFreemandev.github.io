@@ -7,17 +7,19 @@ comment : false
 updated : 2025-08-28 20:18:53 +0900
 regenerate: true
 ---
-##### [[/project]] 
+## [[/project]] 
 - Relative Strength Screener(KOSPI/KOSDAQ/NASDAQ)
 - Short Momentum Nasdaq Screener
 - Bitcoin Whale Transaction Detect
 - Spitfire Systematic Trading
 - Trading Asset Management Dashboard
 
-##### [[/solana]]
+## [[/solana]]
 - [[/solana/architecture]]
 
-##### [[/algorithms_data_structures]]
+---
+
+### [[/algorithms_data_structures]]
 - Arrays & Strings
 - Trees & Graphs
 - Sorting & Searching
@@ -25,25 +27,25 @@ regenerate: true
 - Number Theory
 - [[/programming/sql]]
 
-##### [[/system_design]]
+### [[/system_design]]
+### [[/culture_fit]]
+### [[/live]] 
 
-##### [[/culture_fit]]
+---
 
-##### [[/live]] 
-
-##### [[/math]]
+## [[/math]]
 - [[/math/gcd]]
 - [[/math/standard-deviation]]
 - [[/math/time-weighted-return]]
 - [[/math/intersections-of-equations]]
 
-##### [[/quant]]
+## [[/quant]]
 - [[/quant/petrocurrency]] 
 - [[/quant/pension]]
 - [[/quant/volatility]]
 - [[/quant/single-price-auction-call]]
 
-##### [[/languages]]
+## [[/languages]]
 - [[/programming]]
     - [[/programming/python]]
     - [[/programming/rust]]
@@ -51,16 +53,16 @@ regenerate: true
     - [[/languages/english]]
     - [[/languages/deutsch]]
     
-##### [[/summary]]
+## [[/summary]]
 - [[/summary/how-to-break-goldman-sachs]]
 - [[/summary/persona]]
 
-##### [[/lifehack]]
+## [[/lifehack]]
 - [[/lifehack/health]]
 - [[/lifehack/paper]]
 - [[/lifehack/productivity]]
 
-##### Archive
+## Archive
 - [[/memo]]
     - [[/memo/2024]]
     - [[/memo/2025]]
