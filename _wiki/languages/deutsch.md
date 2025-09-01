@@ -17,10 +17,9 @@ resource: 0283F321-BD06-45CA-9BF0-B1BFAFDA0327
 #  최종 목표
 - 목표 레벨: **C1**
 - 시작일: **2025-09-01**
-- 현재까지 학습일: **`{{ site.time | date: "%s" | minus: 1756347438 | divided_by: 86400 }}`일 경과**  
+- 현재까지 학습일: **{{ site.time | date: "%s" | minus: 1756329600 | divided_by: 86400 }}일 경과**
 - 주당 학습 가능 시간: **4시간**
 
----
 
 #  공용 필수
 -  어휘 5,000개 이상  
@@ -30,21 +29,20 @@ resource: 0283F321-BD06-45CA-9BF0-B1BFAFDA0327
  -  작문 100편 이상  
  -  말하기 100시간 이상  
 
----
 
 # 레벨별 로드맵
 
 ## [A2](/languages/deutsch/A2)
----
+
 
 ## /languages/deutsch/A1
----
+
 
 ## /languages/deutsch/B1
----
+
 
 ## /languages/deutsch/B2
----
+
 
 ## /languages/deutsch/C1
 
