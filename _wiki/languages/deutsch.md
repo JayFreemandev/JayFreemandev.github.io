@@ -35,16 +35,16 @@ resource: 0283F321-BD06-45CA-9BF0-B1BFAFDA0327
 ## [A2](/languages/deutsch/A2)
 
 
-## /languages/deutsch/A1
+## [A1](/languages/deutsch/A1)
 
 
-## /languages/deutsch/B1
+## [B1](/languages/deutsch/B1)
 
 
-## /languages/deutsch/B2
+## [B2](/languages/deutsch/B2)
 
 
-## /languages/deutsch/C1
+## [C1](/languages/deutsch/C1)
 
 reference
 1. 
