@@ -12,11 +12,10 @@ regenerate: true
 - Short Momentum Nasdaq Screener
 - Bitcoin Whale Transaction Detect
 - Spitfire Systematic Trading
-- Trading Asset Management Dashboard
+- [[/trading_asset_management]]
 
 ## [[/monad]] 
-
-
+- [[/monad/txs]]
 
 
 ## [[/solana]]

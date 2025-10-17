@@ -44,6 +44,7 @@
  "/wiki/memo/2024",
  "/wiki/memo/2025",
  "/wiki/monad",
+ "/wiki/monad/txs",
  "/wiki/programming",
  "/wiki/programming/dbeaver",
  "/wiki/programming/python",
@@ -71,5 +72,7 @@
  "/wiki/summary/persona",
  "/wiki/system_behavior",
  "/wiki/system_design",
- "/wiki/system_design/kubernetes"
+ "/wiki/system_design/kubernetes",
+ "/wiki/trading_asset_management",
+ "/wiki/txs"
 ]

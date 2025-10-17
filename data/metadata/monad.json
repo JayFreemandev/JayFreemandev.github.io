@@ -6,5 +6,7 @@
  "url": "/wiki/monad",
  "updated": "2025-10-17 12:59:51 +0900",
  "resource": "C30CFDF2-643B-420A-B22E-95467E44E2FF",
- "children": []
+ "children": [
+  "monad/txs"
+ ]
 }
