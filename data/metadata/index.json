@@ -6,7 +6,6 @@
  "children": [
   "algorithms_data_structures",
   "archive",
-  "culture_fit",
   "finance",
   "infra",
   "languages",
@@ -17,12 +16,14 @@
   "live",
   "math",
   "memo",
+  "monad",
   "programming",
   "project",
   "quant",
   "review",
   "solana",
   "summary",
+  "system_behavior",
   "system_design"
  ]
 }

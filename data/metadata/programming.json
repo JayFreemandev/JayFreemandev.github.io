@@ -10,7 +10,6 @@
   "programming/dbeaver",
   "programming/python",
   "programming/rust",
-  "programming/sql",
-  "programming/system-design"
+  "programming/sql"
  ]
 }

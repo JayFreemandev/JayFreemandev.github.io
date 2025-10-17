@@ -14,6 +14,11 @@ regenerate: true
 - Spitfire Systematic Trading
 - Trading Asset Management Dashboard
 
+## [[/monad]] 
+
+
+
+
 ## [[/solana]]
 - [[/solana/architecture]]
 
@@ -28,7 +33,7 @@ regenerate: true
 - [[/programming/sql]]
 
 ### [[/system_design]]
-### [[/culture_fit]]
+### [[/system_behavior]]
 ### [[/live]] 
 
 ---
@@ -60,7 +65,6 @@ regenerate: true
 ## [[/lifehack]]
 - [[/lifehack/health]]
 - [[/lifehack/paper]]
-- [[/lifehack/productivity]]
 
 ## Archive
 - [[/memo]]

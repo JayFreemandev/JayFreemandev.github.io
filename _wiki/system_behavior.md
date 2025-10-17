@@ -1,6 +1,6 @@
 ---
 layout  : category 
-title   : Culture Fit 
+title   : Systems of Behavior
 summary : 
 date    : 2025-08-28 20:55:01 +0900
 updated : 2025-08-28 20:55:01 +0900
